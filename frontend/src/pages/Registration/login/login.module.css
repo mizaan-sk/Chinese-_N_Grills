@@ -1,0 +1,39 @@
+form{
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-out allow-discrete;
+}
+
+.form_div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F3F3FF;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 10px;
+}
+.error{
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn_new{
+    border-radius: 10px;
+    padding:5px!important ;
+    margin-top: 15px;
+}
+span{
+    color: red;
+}

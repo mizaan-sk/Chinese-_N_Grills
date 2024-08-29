@@ -1,0 +1,131 @@
+.cards_main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+gap: 10px;
+}
+.cards_center{
+padding: 10px 10px;
+background-color: #fff;
+width: 40%;
+}
+.cards_left{
+    padding: 10px 10px;
+    background-color: #fff;
+    width: 30%;
+}
+.cards_right{
+  border-radius: 10px;
+width: 30%;
+
+}
+.cards_left .head_text{
+font-size: 25px;
+font-weight: 600;
+margin-bottom: 5px;
+}
+.details ul .list  {
+display: flex;
+justify-content: space-between;
+list-style: none;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 20px;
+}
+
+.cards_center .head_text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.discount_div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.discount_div p{
+font-size: 18px;
+}
+.discount_div button {
+    width: 100px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #FF4C24;
+    border: 1px solid #FF4C24;
+    margin-top: 2px;
+}
+
+.card_start{
+    background-color: #fff;
+    padding: 5px 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.card_start ul {
+    list-style: none;
+}
+.card_start ul .amt_list
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.amt_list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    margin-top: 10px;
+    }
+
+.amt_list li{
+list-style: none;
+
+}
+#list li{
+font-size: 20px ;
+font-weight: 600;
+}
+
+.payment_part{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.payment_part .head_text{
+    font-size:20px ;
+    font-weight: 600;
+    text-align: center;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
+.btn button {
+    font-size: 20px;
+    width: 110px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #007FFF;
+}
+
+@media screen and (max-width:1200px) {
+    .cards_center{
+        width: 100%;
+        }
+        .cards_left{
+            width: 100%;
+        }
+        .cards_right{
+        width: 100%;
+        
+        }
+        .cards_main{
+            flex-direction: column;
+        }
+}
