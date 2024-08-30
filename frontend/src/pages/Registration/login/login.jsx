@@ -4,7 +4,12 @@ import {LoginSchema} from "../login/login_schema/login-schema"
 import style from "../login/login.module.css";
 import { StoreContext } from '../../../context/StoreContext';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
+
 export const Login = () => {
+  const navigate = useNavigate();
+
   const {url,setToken, token} = useContext(StoreContext)
   const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
     initialValues: {
@@ -13,10 +18,7 @@ export const Login = () => {
     },
    validationSchema: LoginSchema,
    onSubmit: async (values) => {
-    // First, handle the Formik submission logic
     console.log(values);
-
-    // Then, handle the login logic
     let newurl = url + "/api/user/login";
     try {
       const response = await axios.post(newurl, values);
@@ -25,6 +27,15 @@ export const Login = () => {
       if (response.data.success) {
         setToken(response.data.token);
         sessionStorage.setItem("token", response.data.token);
+values.email = "";
+values.password = "";
+Swal.fire({
+  title: 'Thanks For Registering ',
+  text: 'You Will Redirect To Home Page',
+});
+setTimeout(function() {
+  navigate("/")
+}, 3000);
       } else {
         alert(response.data.message);
       }

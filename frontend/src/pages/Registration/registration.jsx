@@ -3,6 +3,7 @@ import style from "./registration.module.css";
 import img from "./logo.png";
 import { Register } from './register/register';
 import { Login } from './login/login';
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const [tabs, setTabs] = useState(0);
@@ -10,14 +11,17 @@ const Registration = () => {
   const changeTabs = (index) => {
     setTabs(index);
   };
-
+const navigate =  useNavigate();
+const handleClick = () => {
+  navigate("/");
+}
   return (
     <>
       <div className={style.bg_image}>
         <div className={style.overlay}></div>
         <div className={style.form}>
           <div className={style.head_img}>
-            <img src={img} alt="logo image" />
+            <img src={img} alt="logo image"  onClick={handleClick}/>
             <div className={style.form_start}>
               <div className={style.d_flex}>
                 <ul>
