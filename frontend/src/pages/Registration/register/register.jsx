@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useFormik } from 'formik';
 import { Registerschema } from './register-schema/register_schema';
-import style from "../register/register.module.css";
+import styles from "../register/register.module.css";
 import { StoreContext } from '../../../context/StoreContext';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-export const Register = () => {
+export const Register = ({changeTabs}) => {
   const { url, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -28,7 +28,7 @@ export const Register = () => {
 
         if (response.data.success) {
           setToken(response.data.token);
-          sessionStorage.setItem("token", response.data.token);
+          localStorage.setItem("token", response.data.token);
        
          values.name = "";
          values.email = "";
@@ -57,7 +57,7 @@ export const Register = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className={style.form_div}>
+        <div className={styles.form_div}>
           <label htmlFor="Name" className="form-label">Enter Name <span>*</span></label>
           <input
             type="text"
@@ -68,10 +68,10 @@ export const Register = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.name && touched.name ? <p className={style.error}>{errors.name}</p> : ""}
+          {errors.name && touched.name ? <p className={styles.error}>{errors.name}</p> : ""}
         </div>
 
-        <div className={style.form_div}>
+        <div className={styles.form_div}>
           <label htmlFor="exampleInputEmail1" className="form-label">Email address <span>*</span></label>
           <input
             type="email"
@@ -82,10 +82,10 @@ export const Register = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.email && touched.email ? <p className={style.error}>{errors.email}</p> : ""}
+          {errors.email && touched.email ? <p className={styles.error}>{errors.email}</p> : ""}
         </div>
 
-        <div className={style.form_div}>
+        <div className={styles.form_div}>
           <label htmlFor="password" className="form-label">Password <span>*</span></label>
           <input
             type="password"
@@ -96,10 +96,10 @@ export const Register = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.password && touched.password ? <p className={style.error}>{errors.password}</p> : ""}
+          {errors.password && touched.password ? <p className={styles.error}>{errors.password}</p> : ""}
         </div>
 
-        <div className={style.form_div}>
+        <div className={styles.form_div}>
           <label htmlFor="confirm_password" className="form-label">Confirm Password <span>*</span></label>
           <input
             type="password"
@@ -110,10 +110,12 @@ export const Register = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.con_password && touched.con_password ? <p className={style.error}>{errors.con_password}</p> : ""}
+          {errors.con_password && touched.con_password ? <p className={styles.error}>{errors.con_password}</p> : ""}
         </div>
-
-        <button type="submit" className={style.btn_new}>Submit</button>
+        <div styles= {{cursor:"pointer"}} onClick={()=>changeTabs(0)}>
+    Already Have Account?
+        </div>
+        <button type="submit" className={styles.btn_new}>Submit</button>
       </form>
 
       <ToastContainer />

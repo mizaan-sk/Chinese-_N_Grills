@@ -40,7 +40,7 @@ const handleClick = () => {
                 </ul>
               </div>
               <div className={style.tab_content}>
-            {tabs === 0 ? <Login /> : <Register />}
+            {tabs === 0 ? <Login changeTabs = {changeTabs}/> : <Register changeTabs= {changeTabs} />}
           </div>
             </div>
           </div>
