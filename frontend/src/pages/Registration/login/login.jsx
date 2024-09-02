@@ -5,9 +5,10 @@ import style from "../login/login.module.css";
 import { StoreContext } from '../../../context/StoreContext';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
-export const Login = () => {
+export const Login = ({changeTabs}) => {
   const navigate = useNavigate();
 
   const {url,setToken, token} = useContext(StoreContext)
@@ -65,7 +66,15 @@ setTimeout(function() {
    errors.password  ? <p className={style.error}>{errors.password}</p>:""
  } 
 </div>
-
+<div style= {{cursor:"pointer", textDecoration:"underline"}} onClick={()=>changeTabs(1)}>
+         New Here? Click To Register
+        </div>
+   <Link to = "/forgot-password">
+   <div style= {{cursor:"pointer", marginTop:"10px"}} >
+        Forgot Password?
+        </div>
+   </Link>
+   
 <button type="submit" className={style.btn_new}>Submit</button>
 </form>
    
@@ -74,3 +83,8 @@ setTimeout(function() {
   )
 }
 
+export const Container = styled.div`
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+`

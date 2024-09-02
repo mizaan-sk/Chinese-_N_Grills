@@ -6,6 +6,10 @@ import userRouter from "./routes/UserRoutes.js";
 import 'dotenv/config'
 import CartRouter from "./routes/CartRouter.js";
 import orderRouter from "./routes/orderRoute.js";
+import forgotpasswordRouter from "./routes/forgotpassworRouter.js";
+
+
+
 //app config
 const app = express();
 const port = 5000;
@@ -23,6 +27,13 @@ app.use('/images',express.static('uploads'))
 app.use('/api/user',userRouter)
 app.use('/api/cart',CartRouter)
 app.use('/api/order',orderRouter)
+app.use("/user",forgotpasswordRouter)
+
+
+
+
+
+
 
 app.get("/", (req, res) => {
     res.send("API Working");
@@ -31,3 +42,8 @@ app.listen(port, () => {
     console.log(`Server starting at port http://localhost:${port}`);
 });
 //mongodb+srv://mizaan:7208151615@cluster0.vmtq1wk.mongodb.net/?
+
+
+
+
+
