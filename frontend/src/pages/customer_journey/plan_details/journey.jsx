@@ -25,10 +25,14 @@ export const Journey = () => {
         },
         validationSchema: Signupschema,
         onSubmit: values => {
-          console.log(values);
         },
     });
 
+const savedetails = () => {
+  const data = sessionStorage.setItem('data', JSON.stringify(values));
+  console.log(data);
+}
+savedetails()
     const [tabs, setactivetabs] = useState(0);
     const handleClick = (index) => {
         setactivetabs(index);
@@ -105,7 +109,7 @@ export const Journey = () => {
                       <input type="text" name="landmark" className="form-control" value={values.landmark} onChange={handleChange} onBlur={handleBlur} />
                       {errors.landmark && touched.landmark ? <p className={styles.error}>{errors.landmark}*</p> : ""}
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    {/* <button type="submit" className="btn btn-primary">Submit</button> */}
                   </form>
                 </div>
                 <div className={styles.right}>
@@ -147,11 +151,17 @@ export const Journey = () => {
                     </div>
                     <Order_summary/>
                   </div>
+
+     <button className={styles.btn_next} onClick={handleSubmit}
+     
+     
+     >Next</button>
                 </div>
+                
               </div>
             )}
             {
-              tabs == 1 ? (<Payment/>): ""
+              tabs == 1 ? (<Payment  savedetails = {savedetails}/>): ""
             }
           </Container>
         </div>

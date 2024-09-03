@@ -1,6 +1,8 @@
 import React from 'react'
 import style from "./payment.module.css"
 export const Payment = () => {
+const data = JSON.parse(sessionStorage.getItem('data'));
+
   return (
     <div>
 <div className={style.cards_main}>
@@ -13,31 +15,27 @@ Delivery Details
   <ul>
     <div className={style.list}>
       <li>Name:</li>
-      <li>Aalain</li>
+      <li>{data.name}</li>
     </div>
     <div className={style.list}>
       <li>Email Address:</li>
-      <li>ala@gmai.com</li>
+      <li>{data.email}</li>
     </div>
     <div className={style.list}>
       <li>Apt/Villa No:</li>
-      <li>Xyz</li>
+      <li>{data.villa_no}</li>
     </div>
     <div className={style.list}>
       <li>Building Name:</li>
-      <li>Xyz</li>
+      <li>{data.building_name}</li>
     </div>
     <div className={style.list}>
       <li>Street Name:</li>
-      <li>Xyz</li>
+      <li>{data.street_name}</li>
     </div>
     <div className={style.list}>
       <li>Landmark:</li>
-      <li>Xyz</li>
-    </div>
-    <div className={style.list}>
-      <li>Mobile No:</li>
-      <li>Xyz</li>
+      <li>{data.landmark}</li>
     </div>
   </ul>
 </div>
