@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { useEffect } from "react";
 import axios from 'axios';
-
+import React from "react";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
