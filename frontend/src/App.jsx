@@ -13,6 +13,7 @@ import Registration from './pages/Registration/registration'
 import { Forgot_Password } from './pages/forgot password/forgot-password'
 import { StoreContext } from './context/StoreContext'
 import Reset_password from './pages/Registration/reset_password/reset_password'
+import Refer from './pages/Refer/Refer'
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/register' element={<Registration />} />
         <Route path='/forgot-password' element={<Forgot_Password />} />
         <Route path='/reset-password/:id/:token' element={<Reset_password />} />
+        <Route path='/refer' element={<Refer />} />
       </Routes>
 
       {showNavbarAndFooter && <Footer />}

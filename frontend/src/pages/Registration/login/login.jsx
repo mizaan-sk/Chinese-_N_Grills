@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useFormik } from 'formik';
 import {LoginSchema} from "../login/login_schema/login-schema"
 import style from "../login/login.module.css";
@@ -7,10 +7,14 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 
 export const Login = ({changeTabs}) => {
   const navigate = useNavigate();
-
+const [Eye, setEye] = useState(false)
+const EyeChange = () =>{
+  setEye(!Eye)
+}
   const {url,setToken, token} = useContext(StoreContext)
   const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
     initialValues: {
@@ -61,10 +65,14 @@ setTimeout(function() {
 
 <div className={style.form_div}>
  <label htmlFor="password" className="form-label">Password <span>*</span></label>
- <input type="password" name = "password" className="form-control" id="exampleInputPassword1" value = {values.password} onChange={handleChange} onBlur={handleBlur}/>
+
+<input type={Eye ? "text" : "password"}  name = "password" className="form-control" id="exampleInputPassword1" value ={values.password} onChange={handleChange} onBlur={handleBlur}/>
  {
    errors.password  ? <p className={style.error}>{errors.password}</p>:""
- } 
+ }          <span className={style.eye_icon} onClick={EyeChange} role="button">
+ {Eye ?  <IoIosEye />: <IoIosEyeOff />}  {/* Switch icons */}
+</span>
+
 </div>
 <div style= {{cursor:"pointer", textDecoration:"underline"}} onClick={()=>changeTabs(1)}>
          New Here? Click To Register

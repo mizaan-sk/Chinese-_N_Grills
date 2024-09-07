@@ -1,0 +1,29 @@
+.image_sect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+    gap: 5px;
+}
+
+.image_sect img {
+    width: 250px;
+    height: 200px;
+}
+.image_sect h4{
+    color: rgb(138, 136, 136);
+    font-size: 20px;
+}
+.image_sect p {
+    color: grey;
+    font-size: 14px;
+}
+
+.image_sect button {
+    width: 22vw;
+    font-size: 15px;
+    /* padding: 5px !important; */
+    /* border-radius:2px ; */
+    margin-bottom: 19px;
+}

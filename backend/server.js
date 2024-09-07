@@ -7,6 +7,7 @@ import 'dotenv/config'
 import CartRouter from "./routes/CartRouter.js";
 import orderRouter from "./routes/orderRoute.js";
 import forgotpasswordRouter from "./routes/forgotpassworRouter.js";
+import ReferEmailRouter from './routes/ReferEmail.js'
 
 
 
@@ -28,7 +29,7 @@ app.use('/api/user',userRouter)
 app.use('/api/cart',CartRouter)
 app.use('/api/order',orderRouter)
 app.use("/user",forgotpasswordRouter)
-
+app.use("/refer",ReferEmailRouter)
 
 
 

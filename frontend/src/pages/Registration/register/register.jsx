@@ -29,7 +29,7 @@ export const Register = ({changeTabs}) => {
         if (response.data.success) {
           setToken(response.data.token);
           localStorage.setItem("token", response.data.token);
-       
+          localStorage.setItem("name",values.name);
          values.name = "";
          values.email = "";
          values.password = "";

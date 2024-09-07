@@ -1,0 +1,121 @@
+/* Base Styles for larger screens */
+.referfriend {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for spacing */
+}
+
+.cont .img {
+    width: 40%; /* Changed from fixed to percentage */
+    max-width: 500px;
+    border-right: 2px solid rgb(167, 163, 163);
+}
+
+.ref_code {
+    background-color: #5AE4A8;
+    border-radius: 10px;
+    max-width: 90%; /* Made it fluid */
+    
+    padding: 10px;
+    text-align: center; /* Ensures the text is centered */
+}
+
+.ref_code span {
+    color: black;
+    font-weight: 700;
+}
+
+.refer_image {
+    width: 23px;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: white;
+}
+
+.ref_code h3 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: white;
+    font-weight: 500;
+    justify-content: center; /* Center items horizontally */
+}
+
+.ref_code h3 img {
+    cursor: pointer;
+}
+
+.referal_sect {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.form {
+    background-color: #5AE4A8;
+    border-radius: 10px;
+    padding: 20px; /* Added padding for spacing */
+    width: 100%; /* Make form responsive */
+    max-width: 500px; /* Set max width */
+}
+
+/* Responsive Styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .cont {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .cont .img {
+        width: 80%; /* Shrinks image for mobile */
+        border-right: none; /* Remove border on mobile */
+    }
+
+    .ref_code {
+        width: 90%; /* Increase the width on smaller screens */
+        margin: 0 auto;
+    }
+
+    .ref_code h3 {
+        font-size: 18px; /* Reduce the font size */
+    }
+    .form{
+        margin: 0 auto;
+        padding: 5px;
+    }
+   
+}
+
+@media screen and (max-width: 480px) {
+    .referfriend {
+        font-size: 20px; /* Decrease title size for smaller devices */
+    }
+
+    .form{
+        margin: 0 auto;
+    }
+    .ref_code {
+        margin: 0 auto;
+        padding: 8px;
+    }
+
+    .form {
+        width: 90%; /* Form takes more space on smaller screens */
+        max-width: 400px;
+    }
+
+    .cont .img {
+        width: 100%; /* Image takes full width on very small screens */
+    }
+}

@@ -33,6 +33,10 @@
         border-radius: 10px;
         padding:5px!important ;
         margin-top: 15px;
+        font-size: 20px;
+    }
+    .btn_new:hover{
+        background-color: rgb(184, 79, 79);
     }
     span{
         color: red;
