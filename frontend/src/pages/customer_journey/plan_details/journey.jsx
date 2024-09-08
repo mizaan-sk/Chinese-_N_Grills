@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./journey.module.css";
 import { GoTriangleRight } from "react-icons/go";
 import { useFormik } from 'formik';
@@ -8,7 +8,7 @@ import { StoreContext } from "../../../context/StoreContext";
 import { assets, food_list } from "../../../assets/assets";
 import Order_summary from "./order_summary/order_summary";
 import { Payment } from "../payment/payment";
-
+import DisableCart from "../../Cart/DisableCart/DisableCart";
 export const Journey = () => {
   const {cartItems,food_list,removeFromCart,getTotalCartAmount,url} = useContext(StoreContext);
 
@@ -32,6 +32,7 @@ const savedetails = () => {
   const data = sessionStorage.setItem('data', JSON.stringify(values));
   console.log(data);
 }
+
 savedetails()
     const [tabs, setactivetabs] = useState(0);
     const handleClick = (index) => {
@@ -40,6 +41,8 @@ savedetails()
 
     return (
       <>
+     {getTotalCartAmount() === 0 ? <DisableCart/>: 
+
         <div className={styles.bg_body}>
           <Container>
             <div className={styles.tabs}>
@@ -128,7 +131,10 @@ savedetails()
               <img src={url+"/images/"+item.image} alt="" />  
               </div>
               <div className={styles.text_part}>
+                <div className={styles.cross}>
                 <p>{item.name}</p>
+                <p onClick={()=>removeFromCart(item._id)} >X</p>
+                </div>
                 <p>{item.description}
 
 </p>
@@ -165,6 +171,8 @@ savedetails()
             }
           </Container>
         </div>
+        
+        }
       </>
     );
 };
