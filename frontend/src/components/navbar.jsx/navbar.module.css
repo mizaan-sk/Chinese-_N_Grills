@@ -1,0 +1,30 @@
+
+.bg_color {
+    box-shadow: -1px 9px 16px -10px rgba(0,0,0,0.75);}
+nav .navbar {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 10px;
+box-shadow: -1px 9px 8px -4px rgba(0,0,0,0.75);
+padding-bottom: 0px;
+}
+.nav_menu ul{
+    display: flex;
+}
+.nav_menu ul li{
+list-style:none ;
+font-size: 20px;
+margin-right: 30px;
+font-weight: 500;
+}
+nav button {
+    width: 100px;
+    border-radius: 10px;
+    padding: 1px;
+    height: 50px;
+    font-size: 20px;
+}
+.bg_color{
+
+}

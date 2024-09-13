@@ -9,6 +9,8 @@ const Navbar = ({ setshowLogin }) => {
   const navigate = useNavigate()
   const onlogout = () => {
     localStorage.removeItem("token")
+    localStorage.removeItem("name")
+    localStorage.removeItem("isLoggedIn")
     setToken("")
     navigate("/")
   }
@@ -20,6 +22,7 @@ const Navbar = ({ setshowLogin }) => {
         <a href="#explore-menu" onClick={() => setmenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>menu</a>
         <a href="#app-download" onClick={() => setmenu("menu")} className={menu === "menu" ? "active" : ""}>mobile-app</a>
         <a href="#footer" onClick={() => setmenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</a>
+        <Link to = "/about-us">About Us</Link>
       </ul>
       <div className="navbar-right">
         

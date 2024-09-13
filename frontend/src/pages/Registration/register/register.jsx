@@ -30,6 +30,7 @@ export const Register = ({changeTabs}) => {
           setToken(response.data.token);
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("name",values.name);
+          localStorage.setItem("isLoggedIn",true);
          values.name = "";
          values.email = "";
          values.password = "";
@@ -43,6 +44,7 @@ export const Register = ({changeTabs}) => {
         }, 3000);
         } else {
           toast.error(response.data.message);
+
         }
         
       } catch (error) {

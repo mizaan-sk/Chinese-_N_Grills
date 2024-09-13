@@ -1,0 +1,54 @@
+ .flex_comp_one{
+    margin-top: 50px;
+}
+.flex_comp_one .grill_text{
+    text-align: center;
+}
+.flex_comp_one .grill_text h2 {
+    font-size: 40px;
+}
+.flex_comp_one .grill_text p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.flex_comp_one .sect_flex{
+    display: flex;
+    margin-top: 30px;
+}
+
+.flex_comp_one .sect_flex .left_Sect{
+    width: 50%;
+}
+.flex_comp_one .sect_flex .left_Sect img{
+    width: 90%;
+    /* height: 450px; */
+    object-fit: cover;
+    object-position:center;
+}
+.flex_comp_one .sect_flex .right_Sect{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.flex_comp_one .sect_flex .right_Sect p{
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: left;
+    font-weight: 500;
+}
+.flex_comp_one .sect_flex .right_Sect p:nth-child(2){
+margin-top: 10px;
+}
+.flex_comp_one .sect_flex .right_Sect p:nth-child(3){
+    margin-top: 10px;
+    }
+section.flex_comp_one button 
+{
+    background-color: #FF4500;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+

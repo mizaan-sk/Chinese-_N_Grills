@@ -32,6 +32,8 @@ const EyeChange = () =>{
       if (response.data.success) {
         setToken(response.data.token);
         sessionStorage.setItem("token", response.data.token);
+        localStorage.setItem("isLoggedIn",true);
+
 values.email = "";
 values.password = "";
 Swal.fire({
