@@ -8,6 +8,7 @@ import CartRouter from "./routes/CartRouter.js";
 import orderRouter from "./routes/orderRoute.js";
 import forgotpasswordRouter from "./routes/forgotpassworRouter.js";
 import ReferEmailRouter from './routes/ReferEmail.js'
+import contact_form_router from "./routes/contact_form_router.js";
 
 
 
@@ -30,6 +31,7 @@ app.use('/api/cart',CartRouter)
 app.use('/api/order',orderRouter)
 app.use("/user",forgotpasswordRouter)
 app.use("/refer",ReferEmailRouter)
+app.use("/contact",contact_form_router)
 
 
 

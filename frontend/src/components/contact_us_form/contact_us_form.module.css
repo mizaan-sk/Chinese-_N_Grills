@@ -1,0 +1,99 @@
+.contact_form_sect{
+    margin-top: 50px;
+    padding-bottom: 20px;
+    /* gap: 20px; */
+}
+.contact_form_sect_left{
+    margin: 0 auto;
+    width: 45%;
+}
+
+.contact_form_sect_left .contact_us_form_img {
+width: 100%;
+object-fit: cover;
+object-position: center;
+}
+.contact_form_sect_right{
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   width: 50%;
+}
+.form_text p {
+    font-size: 20px ;
+    font-weight: 600;
+}
+.form_text h3 {
+    font-size: 30px ;
+    font-weight: 700;
+}
+.contact_form_sect_right form {
+    margin-top: 10px;
+}
+.contact_form_sect_right form label {
+    font-size: 18px;
+
+    font-weight: 600;
+}
+.contact_form_sect_right form input {
+    background-color: #F3F1F1;
+margin-top: 10px;
+box-shadow: none;
+}
+.error_message{
+    color: red;font-weight: 600;
+}
+.form_textarea {
+    display: flex;
+    flex-direction: column;
+}
+.form_textarea textarea{
+    border: 1px solid #e1e1e1;
+    outline: none;
+    padding: 10px;
+} 
+.contact_form button{
+border-radius: 10px;
+font-size: 25px;
+font-weight: 600;
+}
+.submitbutton:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  
+  .submitbutton:disabled:hover {
+    background-color: grey; /* Make it clear that the button is disabled */
+    cursor: not-allowed; /* Show that it can't be clicked */
+  }
+.custom_class{
+    background: rgb(36, 197, 36);
+    color: #fff;
+}
+.custom_class_red{
+    background-color: red;
+    color: #fff;
+}
+@media screen  and (max-width:991px) {
+    .contact_form_sect{
+        flex-direction: column;
+        padding: 10px;gap: 20px;
+    }
+    .contact_form_sect_left{
+        width: 100%;
+    }
+    .contact_form_sect_right{
+        width: 100%;
+    }
+    .contact_form_sect{
+        margin-bottom: 20px;
+    }
+    .contact_form_sect_left .contact_us_form_img {
+        width: 100%;
+        }
+    .form_text h3 {
+        font-size: 21px ;
+        font-weight: 700;
+    }
+}
