@@ -10,6 +10,11 @@
     color: #fff;
     width: 100%;
 }
-.bg_banner h1 {
+.bg_banner .heading {
     font-size: 50px;
+}
+@media screen and (max-width:991px) {
+    .bg_banner .heading {
+        font-size: 30px;
+    }
 }

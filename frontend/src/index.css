@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 body{
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 a{
   text-decoration: none;
@@ -26,4 +26,19 @@ a{
 }
 .active-tabs{
   background-color: #FF4C24;
+}
+.flex{
+  display: flex;
+}
+.j-center{
+  justify-content: center;
+}
+.a-center{
+  align-items: center;
+}
+.w-50{
+  width: 50%;
+}
+.j-between{
+  justify-content: space-between;
 }

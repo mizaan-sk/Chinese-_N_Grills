@@ -5,17 +5,17 @@ export const sendReferEmail = async (req, res) => {
     const { friendEmail, referrerName, referrerEmail } = req.body;
 
     try {
-        // Configure the transporter
+       
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             secure: true,
             auth: {
-                user: "shaikhmizaan786@gmail.com",
-                pass: "qjsu yjki bfio vmnz"
+                user: process.env.EMAIL_USER,
+                pass: process.env.PASSWORD
             }
         });
 
-        // Email content
+        
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: friendEmail,
@@ -23,7 +23,7 @@ export const sendReferEmail = async (req, res) => {
             text: `${referrerName} has referred you! Contact them at ${referrerEmail}.`
         };
 
-        // Send the email
+      
         await transporter.sendMail(mailOptions);
         res.status(200).json({ success: true, message: 'Referral email sent successfully!' });
     } catch (error) {
@@ -32,5 +32,3 @@ export const sendReferEmail = async (req, res) => {
     }
 };
 export default sendReferEmail;
-//  user: "shaikhmizaan786@gmail.com",
-//                 pass: "qjsu yjki bfio vmnz"

@@ -5,9 +5,8 @@ export const Bg_banner = ({name}) => {
   return (
     <div>
       <div className={styles.bg_banner}>
-        <h1>{name}</h1>
+        <h1 className={styles.heading}>{name}</h1>
       </div>
     </div>
   )
 }
-
