@@ -51,6 +51,7 @@ export const Footer_new = () => {
                     <Link to = "/about-us">About Us</Link>
 <Link to = "/contact-us">Contact US</Link>
 <Link to = "/menu">Menu</Link>
+<Link to = "/faq">Faq</Link>
                 </div>
             </div>
         </footer>
