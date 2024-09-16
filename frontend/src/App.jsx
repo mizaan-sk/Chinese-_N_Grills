@@ -16,6 +16,7 @@ import Refer from './pages/Refer/Refer';
 import Protected_routes from './Protected Routes/protected_routes';
 import { About_Us } from './pages/About US/about-us';
 import { Contact_us } from './pages/contact_us/contact_us';
+import { Faq } from './pages/Faq/faq';
 
 const App = () => {
 
@@ -24,7 +25,7 @@ const App = () => {
   const isLoggedin = localStorage.getItem('isLoggedIn') 
 
 
-  const showNavbarAndFooter = !['/check', '/login', '/register',"/about-us","/contact-us"].includes(location.pathname);
+  const showNavbarAndFooter = !['/check', '/login', '/register',"/about-us","/contact-us","/faq"].includes(location.pathname);
 
   return (
     <>
@@ -38,6 +39,8 @@ const App = () => {
         <Route path='/verify' element={<Verified />} />
         <Route path='/about-us' element={<About_Us />} />
         <Route path='/contact-us' element={<Contact_us />} />
+        <Route path='/faq' element={<Faq />} />
+       
 
       
         {!isLoggedin && (
