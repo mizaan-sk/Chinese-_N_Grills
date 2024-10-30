@@ -1,0 +1,104 @@
+.Exception_Service_Main_Section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:15px 10px;
+
+}
+
+.Exception_Service_Image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Exception_Service_Image img {
+    width: 85%;
+}
+
+.Exception_Service_ContentSection h1 {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.Exception_Service_ContentSection p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.Exception_Service_ContentSection h3 {
+    color: #CC3333;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.Exception_Service_ContentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:3px;
+    align-content: space-between;
+    padding: 0px 5px;
+}
+.Exception_Service_ContentSection button{
+width: 200px;
+font-size: 22px;
+padding: 4px 6px;
+font-weight: 700;
+border-radius: 20px;
+margin-bottom: 10px;
+}
+@media screen and (max-width:992px){
+    .Exception_Service_Main_Section{
+        display: flex;
+        flex-direction: column;
+    }
+    .Exception_Service_Image img {
+        width: 100%;
+        padding: 12px;
+    }
+    .Exception_Service_ContentSection button{
+        display: flex;
+        justify-content: center;
+    }
+    .Exception_Service_ContentSection button{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:786px){
+    .Exception_Service_Image img {
+        margin: 10px 0px;
+    }
+    .Exception_Service_ContentSection h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .Exception_Service_ContentSection p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .Exception_Service_ContentSection h3 {
+        font-size: 23px;
+    }
+    .Exception_Service_ContentSection button{
+        font-size: 17px;
+        width: 160px;
+    }
+}
+@media screen and (max-width:590px){
+    .Exception_Service_Image img {
+        width: 95%;
+    }
+    .Exception_Service_ContentSection button{
+        font-size: 18px;
+        width: 150px;
+    }
+    .Exception_Service_ContentSection h1 {
+        font-size: 25px;
+        line-height: 40px;
+    }
+}

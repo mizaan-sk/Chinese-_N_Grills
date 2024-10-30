@@ -1,0 +1,52 @@
+
+.Custom_Experience_Image {
+    position: relative;
+    background: url('../../assets/Customer_Experience_image/Image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+.Image_text{
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    font-weight: 700;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.Image_text p{
+    font-size: 30px;
+    font-weight:700;
+}
+.Content_Area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.Content_Area p:nth-child(1){
+       font-size: 40px; 
+       font-weight: 700;
+}
+.Content_Area p:nth-child(2){
+    font-size: 20px; 
+}
+@media screen and (max-width:420px){
+    .Image_text p{
+        font-size: 22px; 
+    }
+    .Content_Area p:nth-child(1){
+        font-size: 30px; 
+     }
+ .Content_Area p:nth-child(2){
+     font-size: 15px; 
+ }
+ .Custom_Experience_Image {
+    height: 250px;
+ }
+ .Image_text{
+    gap: 25px;
+ }
+}
