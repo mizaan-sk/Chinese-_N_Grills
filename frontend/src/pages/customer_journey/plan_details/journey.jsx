@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
+
 import styles from "./journey.module.css";
 import { GoTriangleRight } from "react-icons/go";
 import { useFormik } from 'formik';
@@ -179,6 +180,12 @@ savedetails()
 
 export const Container = styled.div`
   max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+`;
+
+export const TomatoContainer = styled.div`
+  max-width: 1150px;
   margin: 0 auto;
   overflow: hidden;
 `;

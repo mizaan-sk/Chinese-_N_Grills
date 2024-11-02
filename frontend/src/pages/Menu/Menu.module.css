@@ -1,0 +1,11 @@
+.Menu_Main_Section{
+    padding: 0px 10px;
+    padding-bottom: 40px;
+    background-color: #f5edda;
+}
+.Menu_Below_Section h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
