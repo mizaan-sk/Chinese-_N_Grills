@@ -41,10 +41,27 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
-  const fetchFood = async () => {
-    const response = await axios.get(url + "/api/food/list");
-    setfood_list(response.data.data)
-  }
+
+
+
+  useEffect(() => {
+    // Fetch data only once when the provider mounts
+    const fetchFood = async () => {
+      try {
+        const response = await axios.get(url + "/api/food/list");
+        // const data = await response.json();
+        setfood_list(response.data.data);
+      } catch (error) {
+        console.error('Error fetching food data:', error);
+      }
+    };
+
+    fetchFood();
+  }, []);
+  // const fetchFood = async () => {
+  //   const response = await axios.get(url + "/api/food/list");
+  //   setfood_list(response.data.data)
+  // }
 
   const loadCartData = async (token) => {
     const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } })

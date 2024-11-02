@@ -1,54 +1,160 @@
- .flex_comp_one{
-    margin-top: 50px;
-}
-.flex_comp_one .grill_text{
-    text-align: center;
-}
-.flex_comp_one .grill_text h2 {
-    font-size: 40px;
-}
-.flex_comp_one .grill_text p {
-    font-size: 20px;
-    font-weight: 600;
-}
-.flex_comp_one .sect_flex{
-    display: flex;
-    margin-top: 30px;
-}
+ .flex_comp_one {
+     margin-top: 50px;
+ }
 
-.flex_comp_one .sect_flex .left_Sect{
-    width: 50%;
-}
-.flex_comp_one .sect_flex .left_Sect img{
-    width: 90%;
-    /* height: 450px; */
-    object-fit: cover;
-    object-position:center;
-}
-.flex_comp_one .sect_flex .right_Sect{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-.flex_comp_one .sect_flex .right_Sect p{
-    font-weight: 500;
-    font-size: 19px;
-    line-height: 25px;
-    text-align: left;
-    font-weight: 500;
-}
-.flex_comp_one .sect_flex .right_Sect p:nth-child(2){
-margin-top: 10px;
-}
-.flex_comp_one .sect_flex .right_Sect p:nth-child(3){
-    margin-top: 10px;
+ .flex_comp_one .grill_text {
+     text-align: center;
+ }
+
+ .flex_comp_one .grill_text h2 {
+     font-size: 40px;
+ }
+
+ .flex_comp_one .grill_text p {
+     font-size: 20px;
+     font-weight: 600;
+ }
+
+ .flex_comp_one .sect_flex {
+     display: flex;
+     margin-top: 30px;
+ }
+
+ .flex_comp_one .sect_flex .left_Sect {
+     width: 50%;
+     padding: 0px 5px;
+ }
+ .sect_flex{
+    gap: 10px;
+ }
+
+ .flex_comp_one .sect_flex .left_Sect img {
+     width: 90%;
+     /* height: 450px; */
+     object-fit: cover;
+     object-position: center;
+ }
+
+ .flex_comp_one .sect_flex .right_Sect {
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     padding: 0px 5px;
+ }
+
+ .flex_comp_one .sect_flex .right_Sect p {
+     font-weight: 500;
+     font-size: 19px;
+     line-height: 24px;
+     text-align: left;
+     font-weight: 500;
+ }
+
+ .flex_comp_one .sect_flex .right_Sect p:nth-child(2) {
+     margin-top: 10px;
+ }
+
+ .flex_comp_one .sect_flex .right_Sect p:nth-child(3) {
+     margin-top: 10px;
+ }
+
+ section.flex_comp_one button {
+     background-color: #FF4500;
+     margin-top: 20px;
+     border-radius: 20px;
+     font-size: 20px;
+     font-weight: 600;
+     padding: 6px 10px;
+     text-align: center;
+ }
+
+ @media screen and (max-width:1200px) {
+     .flex_comp_one .sect_flex .right_Sect p {
+         font-size: 18px;
+     }
+ }
+
+ @media screen and (max-width:1130px) {
+     .flex_comp_one .sect_flex .right_Sect p {
+         font-size: 16px;
+         line-height: 22px;
+     }
+     .flex_comp_one .grill_text h2 {
+        font-size: 30px;
     }
-section.flex_comp_one button 
-{
-    background-color: #FF4500;
-    margin-top: 20px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 600;
-}
+ }
 
+ @media screen and (max-width:1090px) {
+     .flex_comp_one .sect_flex .right_Sect p {
+         font-size: 15px;
+         line-height: 22px;
+     }
+ }
+
+ @media screen and (max-width:1050px) {
+     .flex_comp_one .sect_flex .right_Sect p {
+         font-size: 15px;
+         line-height: 20px;
+     }
+ }
+
+ @media screen and (max-width:950px) {
+     .flex_comp_one .sect_flex .right_Sect p {
+         font-size: 16px;
+         line-height: 20px;
+     }
+     .flex_comp_one{
+        margin-top: 10px;
+     }
+     .sect_flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0px;
+        gap: 20px;
+     }
+     .flex_comp_one .sect_flex .right_Sect {
+        width: 100%;
+        padding: 0px 10px;
+     }
+     .flex_comp_one .sect_flex .left_Sect {
+        align-items: center;
+        width: 100%;
+     }
+     .flex_comp_one .sect_flex .left_Sect img{
+        width: 70%;
+     }
+     section.flex_comp_one button{
+        font-size: 19px;
+    }
+ }
+
+ @media screen and (max-width:550px) {
+    .flex_comp_one .sect_flex .left_Sect img{
+        width: 80%;
+     }
+     
+    .flex_comp_one .grill_text p {
+        font-size: 17px;
+        }
+        .flex_comp_one .sect_flex .right_Sect p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        section.flex_comp_one button{
+            font-size: 16px;
+        }
+ }
+ @media screen and (max-width:470px) {
+    .flex_comp_one .sect_flex .left_Sect img{
+        width: 90%;
+     }
+     .flex_comp_one .grill_text h2 {
+        font-size: 26 px;
+    }
+    .flex_comp_one .grill_text p {
+        font-size: 14px;
+        }
+        
+    }

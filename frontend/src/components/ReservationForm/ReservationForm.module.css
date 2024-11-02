@@ -1,0 +1,97 @@
+.ReservationForm_MainSection {
+    background-color: #F7F7F7;
+    padding: 20px;
+margin-bottom: 10px;
+}
+
+.Reservation_White{
+        background-color: white;
+}
+.ReservationForm_MainSection h1 {
+    font-size: 36px;
+    font-weight: 700;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: #FF3E00;
+}
+
+.Reservation_Manage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding:10px 0px;
+}
+
+.Input_Section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.select_feild {
+    padding: 10px;
+    background-color: #F0F0F0;
+    border-radius: 4px;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    outline: 0;
+}
+
+.error_message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.success_message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.select_feild::placeholder{
+    color: black;
+    font-weight: 600;
+}
+
+.submits_button button  {
+width: 100%;
+max-width: 95%;
+border-radius: 25px;
+padding:5px;
+font-weight: 600;
+cursor: pointer;
+}
+.submits_button{
+    display: flex;
+justify-content: center;
+margin-bottom: 10px;
+}
+.submits_button button:hover {
+    background-color: #e63946;
+} 
+@media screen and (max-width:786px){
+    .submits_button button  {
+        font-size: 19px;
+    }
+    .ReservationForm_MainSection h1{
+        padding: 0px;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:390px){
+
+    .Reservation_Manage {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding:5px 0px;
+    }
+    .select_feild::placeholder{
+        font-size: 12px;
+    }
+    .select_feild{
+        font-size: 14px;
+    }
+
+}

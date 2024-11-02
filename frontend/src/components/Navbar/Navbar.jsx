@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets.js";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
+import { TomatoContainer } from "../../pages/customer_journey/plan_details/journey.jsx";
 const Navbar = ({ setshowLogin }) => {
   const [menu, setmenu] = useState("home")
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext)
@@ -15,6 +16,7 @@ const Navbar = ({ setshowLogin }) => {
     navigate("/")
   }
   return (
+    <TomatoContainer>
     <div className="navbar">
       <Link to='/'><img src={assets.logo} className="logo" /></Link>
       <ul className="navbar-menu">
@@ -44,7 +46,7 @@ const Navbar = ({ setshowLogin }) => {
             </div>
           </div>}
       </div>
-    </div>
+    </div></TomatoContainer>
   );
 };
 

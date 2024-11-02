@@ -1,4 +1,6 @@
 import style from "./contact_us_cards.module.css"
+import React from "react"
+import mobile_icon from "../../assets/contact_us/mb-check.png"
 import { Container } from "../../pages/customer_journey/plan_details/journey"
 
 export const Contact_us_cards = ({data_value,opt}) => { 

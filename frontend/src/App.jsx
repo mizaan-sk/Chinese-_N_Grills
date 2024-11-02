@@ -17,6 +17,8 @@ import Protected_routes from './Protected Routes/protected_routes';
 import { About_Us } from './pages/About US/about-us';
 import { Contact_us } from './pages/contact_us/contact_us';
 import { Faq } from './pages/Faq/faq';
+import Menu from './pages/Menu/Menu';
+import { Navbar_new } from './components/navbar.jsx/navbar';
 
 const App = () => {
 
@@ -29,7 +31,8 @@ const App = () => {
 
   return (
     <>
-      {showNavbarAndFooter && <Navbar />}
+      {showNavbarAndFooter && <Navbar_new />}
+      {/* {showNavbarAndFooter && <Navbar />} */}
 
       <Routes>
         {/* Public Routes */}
@@ -40,7 +43,7 @@ const App = () => {
         <Route path='/about-us' element={<About_Us />} />
         <Route path='/contact-us' element={<Contact_us />} />
         <Route path='/faq' element={<Faq />} />
-       
+        <Route path='/menu' element={<Menu/>}/>
 
       
         {!isLoggedin && (

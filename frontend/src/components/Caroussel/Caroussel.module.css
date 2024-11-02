@@ -1,0 +1,103 @@
+.Image_Section {
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    background-color: #F0F0F0;
+}
+
+.Burger_Image {
+    background: url('../../assets/Caroussel_Image/burger-img.png');
+    width: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    position: relative;
+}
+
+.Pudina_Image {
+    background: url('../../assets/Caroussel_Image/pduina-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 80px;
+    z-index: 0;
+}
+
+.Review_Card {
+    width: 100%;
+    margin-top: 90px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.Cards_Section {
+    max-width: 90%;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 2px 5px 9px 3px rgb(219, 217, 217);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.Image_Content_Section {
+    display: flex;
+}
+
+.Image img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.User_Name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.Location {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stars img {
+    width: 170px;
+}
+
+.Content_Section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: start;
+}
+
+.Cards_Section .Content {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.slick-prev, .slick-next {
+    display: none;
+  }
+  
+@media screen and (max-width:1180px) {
+    .Content_Section{
+        gap: 0px;
+
+    }
+    .stars img{
+        width: 90px;
+    }
+    .Image img {
+        width: 70px;
+        margin-right: 10px;
+    }
+
+} 
+ @media screen and (max-width:786px) {
+    .Review_Card {
+        left: 20px;
+        max-width: 88%;
+    }
+ }

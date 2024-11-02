@@ -9,6 +9,7 @@ import orderRouter from "./routes/orderRoute.js";
 import forgotpasswordRouter from "./routes/forgotpassworRouter.js";
 import ReferEmailRouter from './routes/ReferEmail.js'
 import contact_form_router from "./routes/contact_form_router.js";
+import reservationRouter from "./routes/ReservationRouter.js";
 
 
 
@@ -32,6 +33,8 @@ app.use('/api/order',orderRouter)
 app.use("/user",forgotpasswordRouter)
 app.use("/refer",ReferEmailRouter)
 app.use("/contact",contact_form_router)
+app.use("/reservation",reservationRouter)
+
 
 
 

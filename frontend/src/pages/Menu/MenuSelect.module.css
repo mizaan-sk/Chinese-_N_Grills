@@ -1,0 +1,44 @@
+/* MenuSelect.module.css */
+.menu_select_main_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.btn_main_section p {
+    padding: 7px 15px;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s ease-out;
+    margin: 10px 0px;
+    color: #FF4D25;
+    background-color: white;
+}
+
+.btn_main_section p:hover {
+    background-color: tomato;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+/* Active styling with specificity */
+.btn_main_section p.active {
+    border: 2px solid rgb(3, 3, 3);
+    padding: 7px 15px;
+    transition: 0.2s ease;
+}
+
+@media screen and (max-width:750px) {
+    .menu_select_main_section{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0px 5px;
+    }
+}
