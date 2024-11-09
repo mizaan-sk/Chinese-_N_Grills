@@ -1,0 +1,11 @@
+.borderBottom {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 100px;
+    padding: 10px 0px;
+}
+.borderBottom p{
+    display: inline-block;
+    border-bottom: 2px solid #000;
+
+}

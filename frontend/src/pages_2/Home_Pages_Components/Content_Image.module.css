@@ -1,0 +1,56 @@
+.Main_Content_Section_Home_Page {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 90px;
+}
+
+.Main_Content_Section_Home_Page .Enjoy_Content {
+    font-family: prata;
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 86px;
+}
+
+.Main_Content_Section_Home_Page .Satisfy_content {
+    font-size: 15px;
+    font-weight: 300;
+}
+.Main_Content_Section_Home_Page span{
+    color: #d3aa52;
+    font-family: Ravi Prakash;
+font-weight: 700;
+font-size:20px;
+}
+.button_Book_Table_home_page {
+    background-color: #d38832;
+    font-size: 23px;
+    padding: 5px 10px;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button_Book_Table_home_page:hover {
+    background-color: #c08732;
+    transition: 0.3s ease-in;
+    color: black;
+}
+
+.Combine_Content_Rolling_Dish {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    padding-top: 6px;
+}
+.Rollng_dish{
+    animation: imgRotate 10s linear infinite ;
+}
+@keyframes imgRotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}

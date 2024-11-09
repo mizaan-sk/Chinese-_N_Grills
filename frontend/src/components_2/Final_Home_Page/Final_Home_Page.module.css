@@ -1,0 +1,25 @@
+.bg_main_section {
+    position: relative;
+    background-image: url('../../assets/bg_banner/bg_Image_Round.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg_main_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1;
+}
+
+
+.bg_main_section > * {
+    position: relative;
+    z-index: 2;
+}
