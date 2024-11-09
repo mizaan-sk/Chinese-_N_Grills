@@ -44,7 +44,7 @@ const App = () => {
         <Route path='/contact-us' element={<Contact_us />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/menu' element={<Menu/>}/>
-
+        <Route path='/newhome' element={<Faq />} />
       
         {!isLoggedin && (
        <>

@@ -1,0 +1,53 @@
+.navbar_main_design_section {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navbar_list ul {
+    display: flex;
+    list-style-type: none;
+    gap: 35px;
+}
+
+.navbar_list ul li {
+    text-decoration: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+.navbar_list ul li {
+    display: flex;
+    align-items: center; 
+}
+
+.dropdown i {
+    font-size: 23px;
+    margin-top: 7px;
+}
+
+
+.navbar_list ul li:hover{
+    color: #d88d1d;
+    transition: 0.3s ease;
+}
+.navbar_logo p {
+    font-size: 25px;
+}
+.Login_Button{
+    background-color:#d38832 ;
+    padding: 3px 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+}
+.Login_Button:hover{
+    background-color: #c08732;
+    transition: 0.3s ease-in;
+    color: black;
+}
