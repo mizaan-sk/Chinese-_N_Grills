@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import style from "./payment.module.css";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,7 @@ import { StoreContext } from '../../../context/StoreContext';
 
 export const Payment = () => {
   const data = JSON.parse(sessionStorage.getItem('data'));
+  const [discount, setdiscount] = useState(null);
   const { url, setToken,getTotalCartAmount } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -52,7 +53,11 @@ export const Payment = () => {
 var discountApply = (getTotalCartAmount,discount)=>{
   var bill = getTotalCartAmount();
   var afterDiscount = bill - (bill * discount / 100);
-alert(`Discount Is Applied, Your Total Bill Is ${afterDiscount}`);  
+  setdiscount(afterDiscount)  
+  Swal.fire({
+    title: `Congratulations ${discount} % Discount Applied Successfully`,
+    timer: 1500
+  });
 }
 const ChargesApplied = (getTotalCartAmount) => {
   const amount = getTotalCartAmount();
@@ -70,6 +75,9 @@ const ChargesApplied = (getTotalCartAmount) => {
     return amount;
   }
 };
+
+
+
 // function percentage(partialValue, totalValue) {
 //   return (100 * partialValue) / totalValue;
 // } 
@@ -152,7 +160,13 @@ const ChargesApplied = (getTotalCartAmount) => {
             <hr />
             <div className={style.amt_list} id={style.list}>
               <li>Total to Pay</li>
-              <li>{ChargesApplied(getTotalCartAmount)}</li>
+             <div className="d-flex">
+             <li style={{  textDecoration:  discount ? "line-through" : null }}>{ChargesApplied(getTotalCartAmount)}</li><li>
+              <span>
+              {discount}</span>
+              </li> 
+             </div>
+
             </div>
           </div>
           <div className={style.payment_part}>
