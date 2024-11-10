@@ -7,7 +7,7 @@ import { StoreContext } from '../../../context/StoreContext';
 
 export const Payment = () => {
   const data = JSON.parse(sessionStorage.getItem('data'));
-  const { url, setToken } = useContext(StoreContext);
+  const { url, setToken,getTotalCartAmount } = useContext(StoreContext);
   const navigate = useNavigate();
 
   function generatePassword() {
@@ -49,7 +49,30 @@ export const Payment = () => {
       alert("Login failed, please try again.");
     }
   };
-
+var discountApply = (getTotalCartAmount,discount)=>{
+  var bill = getTotalCartAmount();
+  var afterDiscount = bill - (bill * discount / 100);
+alert(`Discount Is Applied, Your Total Bill Is ${afterDiscount}`);  
+}
+const ChargesApplied = (getTotalCartAmount) => {
+  const amount = getTotalCartAmount();
+  if (amount > 1000) {
+    return amount;
+  }
+ if (amount > 500) {
+    return amount + 10;
+  }
+  else if (amount > 50) {
+    return amount + 30;
+  }
+ 
+  else {
+    return amount;
+  }
+};
+// function percentage(partialValue, totalValue) {
+//   return (100 * partialValue) / totalValue;
+// } 
   return (
     <div>
       <div className={style.cards_main}>
@@ -91,13 +114,13 @@ export const Payment = () => {
           </div>
           <div className={style.disc}>
             <div className={style.discount_div}>
-              <p><b>BIGSAVINGS</b>: Flat 10% Discount on your subscription</p>
-              <button>Apply</button>
+              <p><b>10OFF</b>: Flat 10% Discount </p>
+              <button onClick={()=>discountApply(getTotalCartAmount,10)}>Apply</button>
             </div>
             <hr />
             <div className={style.discount_div}>
-              <p><b>BIGSAVINGS</b>: Flat 10% Discount on your subscription</p>
-              <button>Apply</button>
+              <p><b>20FF</b>: Flat 20% Discount </p>
+              <button onClick={()=>discountApply(getTotalCartAmount,20)}>Apply</button>
             </div>
             <hr />
           </div>
@@ -107,7 +130,7 @@ export const Payment = () => {
             <ul>
               <div className={style.amt_list}>
                 <li>Total Amount:</li>
-                <li>552 </li>
+                <li>₹{getTotalCartAmount()}</li>
               </div>
               <div className={style.amt_list}>
                 <li>Delivery Charges:</li>
@@ -129,7 +152,7 @@ export const Payment = () => {
             <hr />
             <div className={style.amt_list} id={style.list}>
               <li>Total to Pay</li>
-              <li>579.6</li>
+              <li>{ChargesApplied(getTotalCartAmount)}</li>
             </div>
           </div>
           <div className={style.payment_part}>

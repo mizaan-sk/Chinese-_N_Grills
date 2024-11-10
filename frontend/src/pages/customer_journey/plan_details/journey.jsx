@@ -10,6 +10,7 @@ import { assets, food_list } from "../../../assets/assets";
 import Order_summary from "./order_summary/order_summary";
 import { Payment } from "../payment/payment";
 import DisableCart from "../../Cart/DisableCart/DisableCart";
+import Swal from "sweetalert2";
 export const Journey = () => {
   const [tabs, setactivetabs] = useState(0);
   const {cartItems,food_list,removeFromCart,getTotalCartAmount,url} = useContext(StoreContext);
@@ -44,7 +45,9 @@ const areAllValuesFilled = (obj) => {
         setactivetabs(tabs + 1)
       }
   else{
-    alert("Fill The Values")
+    Swal.fire({
+      title: "Please Fill Delivery  Details",
+    });
   }
     };
 

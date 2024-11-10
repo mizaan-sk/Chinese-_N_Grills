@@ -3,8 +3,7 @@ import style from "./order_summary.module.css"
 import { StoreContext } from '../../../../context/StoreContext';
 const Order_summary = () => {
   const {cartItems,food_list,removeFromCart,getTotalCartAmount,url} = useContext(StoreContext);
-  console.log(cartItems);
-console.log(food_list);
+
 
   return (
     <div>
@@ -58,7 +57,7 @@ console.log(food_list);
                 <hr />
                 <div className={style.first_list}>
 <li><b>Total To Pay</b> </li>
-<li><b>{getTotalCartAmount()}</b></li>
+<li><b>₹{getTotalCartAmount()}</b></li>
                 </div>
             </ul>
             <div className={style.strip}>

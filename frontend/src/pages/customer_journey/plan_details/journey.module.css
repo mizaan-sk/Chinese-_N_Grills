@@ -134,9 +134,9 @@ margin-top: 10px;
 .cart_section   .head_text {
     font-size: 25px;
 } 
-.btn_next{
+/* .btn_next{
     margin-top: 30%;
-}
+} */
 .tabs_flex{margin-bottom: 30px;}
 
 @media screen and (max-width:1214px) {

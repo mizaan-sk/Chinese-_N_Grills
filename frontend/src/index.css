@@ -78,3 +78,21 @@ a{
   height: 200px;
   overflow-y: scroll;
 }
+.adjust_height::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+.adjust_height::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 1px;
+}
+ 
+.adjust_height::-webkit-scrollbar-thumb {
+  background: #FF4C24; 
+  border-radius: 10px;
+}
+
+.adjust_height::-webkit-scrollbar-thumb:hover {
+  background: #FF4C24; 
+}
