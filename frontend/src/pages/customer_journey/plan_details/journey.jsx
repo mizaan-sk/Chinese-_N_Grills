@@ -11,8 +11,8 @@ import Order_summary from "./order_summary/order_summary";
 import { Payment } from "../payment/payment";
 import DisableCart from "../../Cart/DisableCart/DisableCart";
 export const Journey = () => {
+  const [tabs, setactivetabs] = useState(0);
   const {cartItems,food_list,removeFromCart,getTotalCartAmount,url} = useContext(StoreContext);
-
 
   
     const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
@@ -28,16 +28,24 @@ export const Journey = () => {
         onSubmit: values => {
         },
     });
-
 const savedetails = () => {
   const data = sessionStorage.setItem('data', JSON.stringify(values));
-  console.log(data);
+ 
 }
-
 savedetails()
-    const [tabs, setactivetabs] = useState(0);
-    const handleClick = (index) => {
-        setactivetabs(index);
+
+
+const areAllValuesFilled = (obj) => {
+  return Object.values(obj).every(value => value.trim() !== "");
+};
+
+    const NextClick = () => {
+      if(areAllValuesFilled(values)){
+        setactivetabs(tabs + 1)
+      }
+  else{
+    alert("Fill The Values")
+  }
     };
 
     return (
@@ -50,7 +58,6 @@ savedetails()
               <ul>
                 <li
                   className={tabs == 0 ? "active-tabs" : ""}
-                  onClick={() => handleClick(0)}
                 >
                   Plan Details
                 </li>
@@ -67,8 +74,8 @@ savedetails()
                   <GoTriangleRight size={50} />
                 </span>
                 <li
-                  className={tabs == 2 ? "active-tabs" : ""}
-                  onClick={() => handleClick(2)}
+                  // className={tabs == 2 ? "active-tabs" : ""}
+                  // onClick={() => handleClick(2)}
                 >
                   Confirmation
                 </li>
@@ -121,6 +128,7 @@ savedetails()
                     <div className={styles.head_text}>
                  <p>Cart Items</p>
                     </div>
+                    <div className="adjust_height">
                     <div className={styles.small_cards}>
                
                {food_list.map((item,index)=>{
@@ -156,10 +164,11 @@ savedetails()
           }
         })}
                     </div>
+                    </div>
                     <Order_summary/>
                   </div>
 
-     <button className={styles.btn_next} onClick={handleSubmit}
+     <button className={styles.btn_next} onClick={NextClick}
      
      
      >Next</button>

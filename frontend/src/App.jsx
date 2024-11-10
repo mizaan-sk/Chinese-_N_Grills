@@ -31,8 +31,8 @@ const App = () => {
 
   return (
     <>
-      {showNavbarAndFooter && <Navbar_new />}
-      {/* {showNavbarAndFooter && <Navbar />} */}
+      {/* {showNavbarAndFooter && <Navbar_new />} */}
+      {showNavbarAndFooter && <Navbar />}
 
       <Routes>
         {/* Public Routes */}

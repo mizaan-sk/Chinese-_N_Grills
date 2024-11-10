@@ -40,3 +40,41 @@ a{
 .j-between{
   justify-content: space-between;
 }
+.d-flex{
+  display: flex;
+
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-row{
+  flex-direction: row;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.justify-content-end{
+  justify-content: flex-end;
+}
+.justify-content-start{
+  justify-content: flex-start;
+}
+.align-items-center{
+  align-items: center;
+}
+.align-items-start{
+  align-items: flex-start;
+}
+.align-items-end{
+  align-items: flex-end;
+}
+.w-100{
+  width: 100%;
+}
+.adjust_height{
+  height: 200px;
+  overflow-y: scroll;
+}

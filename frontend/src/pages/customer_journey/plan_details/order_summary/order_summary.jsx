@@ -3,6 +3,9 @@ import style from "./order_summary.module.css"
 import { StoreContext } from '../../../../context/StoreContext';
 const Order_summary = () => {
   const {cartItems,food_list,removeFromCart,getTotalCartAmount,url} = useContext(StoreContext);
+  console.log(cartItems);
+console.log(food_list);
+
   return (
     <div>
       <div className={style.order_summary}>
@@ -18,16 +21,32 @@ const Order_summary = () => {
                 </div>
                 <div>
                   <div className={style.first_list_map}>
-                {food_list.map((item,index)=>{
+                {/* {food_list.map((item,index)=>{
                   if (cartItems[item._id] > 0)
-           {
+           {  
+             <>
              return(
-            <>
             <li>{item.name}</li>
-            <li>1</li></>  
+            <li>1</li>  
             )
+            </>
           }
-        })}
+        })} */}
+<ul className='d-flex justify-content-between w-100 flex-column'>
+
+{
+  food_list.map((item,index)=>{
+    if (cartItems[item._id] > 0){
+    return (
+<div className='d-flex w-100 justify-content-between' key = {index + 1}>
+<li>{item.name}</li>
+<li>{cartItems[item._id]}</li>  
+</div>
+    )
+    }
+  })
+}
+</ul>
         </div>   
                 </div>
 
@@ -39,7 +58,7 @@ const Order_summary = () => {
                 <hr />
                 <div className={style.first_list}>
 <li><b>Total To Pay</b> </li>
-<li>552 ₹</li>
+<li><b>{getTotalCartAmount()}</b></li>
                 </div>
             </ul>
             <div className={style.strip}>
