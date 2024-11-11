@@ -2,6 +2,7 @@ import React from 'react'
 import style from "./flex_comp_one.module.css"
 import { Container } from '../../pages/customer_journey/plan_details/journey'
 import img from "../../assets/flex_comp_one/flex_comp_one.png"
+import { Link } from 'react-router-dom'
 export const Flex_comp_one = () => {
   return (
   <>
@@ -22,9 +23,12 @@ export const Flex_comp_one = () => {
 Our journey started with a passion for bringing together two culinary worlds—traditional Chinese flavors and the art of grilling. At Chinese and Grills, we believe in using the freshest ingredients, carefully selected to ensure that each dish we serve is of the highest quality. From sizzling grills to aromatic Chinese favorites, every bite is crafted to deliver an unforgettable taste experience.
     </p>
     <p>At <b>Chinese and Grills</b>, we don't just serve food we create experiences.  We invite you to explore the unique blend of flavors that defines our culinary identity and discover why Chinese and Grills is more than just a restaurant—it’s a place where passion meets taste.</p>
-    <button>
+   <Link to = "/menu">
+   <button>
     Book Table Now
     </button>
+    </Link>
+   
     </div>
 </div>
     </section>

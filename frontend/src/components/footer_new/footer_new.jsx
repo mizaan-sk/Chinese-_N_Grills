@@ -14,31 +14,37 @@ export const Footer_new = () => {
     <Container>
         <footer>
             <div className={style.footer_top}>
+                <Link to = "/">
                 <div className={style.logo}>
                     <img src={nav_logo} alt="" />
-                </div>
+                </div></Link>
                 <div className={style.center_text}>
                     <p><span style = {{color:"#FF4500"}}>Feel Hunger!</span> Order Your Like Food</p>
                 </div>
+                <Link to ="/menu">
                 <div className={style.btn}>
                     <button>Order Now</button>
-                </div>
+                </div></Link>
             </div>
             <div className={style.footer_bottom}>
                 <div className={style.address}>
                     <p>Address</p>
                     <p>
                         <span><FaLocationDot style = {{color:"#000000"}}/></span>
-                        570 8th Ave,New York, NY 10018 United States
+                       Thane Uthan, Thane, Maharashtra
                     </p>
-                    <p>
+                  <Link to = "tel:+91 8169414040">
+                  <p>
                         <span><FaPhone  style = {{color:"#000000"}}/></span>
-                        1234567890
+                        +91 8169414040
                     </p>
-                    <p>
+                    </Link>
+                   <Link to = "mailto:chineseandgrill.com">
+                   <p>
                         <span><IoMdMail  style = {{color:"#000000"}}/></span>
                         test@gmail.com
-                    </p>
+                    </p></Link>
+
                 </div>
                 <div className={style.hours}>
                     <p>Opening Hours</p>
