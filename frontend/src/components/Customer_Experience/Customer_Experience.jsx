@@ -3,8 +3,8 @@ import styles from './Customer_Experience.module.css'
 const Customer_Experience = () => {
     const Custom_Experience=[
         {id:1 , title:"32+", text:"Restaurant "},
-        {id:2 , title:"5+", text:"Experience "},
-        {id:3, title:"12K", text:"Customers"}
+        {id:2 , title:"5Year +", text:"Experience "},
+        {id:3, title:"12K+", text:"Customers"}
     ]
     return (
         <>

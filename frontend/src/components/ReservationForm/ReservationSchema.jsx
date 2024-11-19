@@ -4,20 +4,20 @@ import React from 'react';
 export const ReservationSchema = Yup.object().shape({
     email: Yup.string()
         .email('Invalid email')
-        .required('Required'),
+        .required('Please Enter Email'),
     name: Yup.string()
         .min(2, 'Too Short!')
         .max(50, 'Too Long!')
-        .required('Required'),
+        .required('Please Enter Name'),
     date: Yup.date()
-        .required('Required'),
+        .required('Please Enter Date'),
     persons: Yup.number()
         .min(1, 'Must be at least 1 person')
-        .required('Required'),
+        .required('Must be at least 1 person'),
     occasion: Yup.string()
         .oneOf(['Birthday Dinner', 'Anniversary Dinner', 'Corporate Dinner', 'Candle Light Dinner'], 'Invalid occasion')
-        .required('Required'),
+        .required('Must be at least 1 Ocassion '),
     dining: Yup.string()
-        .oneOf(['Anniversary', 'Birthday', 'Family Gathering', 'Office Party', 'Corporate Celebrations', 'Others'], 'Invalid dining option')
-        .required('Required'),
+        .oneOf(['Anniversary', 'Birthday', 'Family Gathering', 'Office Party', 'Corporate Celebrations', 'Others'], 'Invalid dining option').required('Must be at least 1 Dining Option')
+       ,
 });

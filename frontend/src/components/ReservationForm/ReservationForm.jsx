@@ -5,12 +5,13 @@ import styles from './ReservationForm.module.css';
 import { ReservationSchema } from './ReservationSchema';
 import { Container } from '../../pages/customer_journey/plan_details/journey';
 import { toast, ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css'; 
-
+import * as Yup from "yup";
+ 
 const ReservationForm = () => {
+
   const HandleSubmit = async (values, { resetForm }) => {
     try {
-      console.log('Form values:', values);
+ 
       const res = await axios.post('http://localhost:5000/reservation/table', {
         email: values.email,
         name: values.name,
@@ -27,7 +28,7 @@ const ReservationForm = () => {
         toast.error('Failed to reserve the table.');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error:');
       toast.error('There was an error in reserving the table.');
     }
   };
@@ -62,7 +63,9 @@ const ReservationForm = () => {
 
                     <div className={styles.Input_Section}>
                       <Field name="email" type="email" placeholder="Enter Email" className={styles.select_feild} />
-                      <ErrorMessage name="email" component="div" style={{ color: 'red' }} className="error-message" />
+                      <ErrorMessage name="email" component="div" style={{ color: 'red' }} className="error-message">
+ 
+</ErrorMessage>
                     </div>
 
                     <div className={styles.Input_Section}>
@@ -73,7 +76,7 @@ const ReservationForm = () => {
                         <option value="Corporate Dinner">Corporate Dinner</option>
                         <option value="Candle Light Dinner">Candle Light Dinner</option>
                       </Field>
-                      <ErrorMessage name="occasion" component="div" style={{ color: 'red' }} className="error-message" />
+                      <ErrorMessage name="occasion" component="div" style={{ color: 'red' }} className="error-message"  />
                     </div>
 
                     <div className={styles.Input_Section}>
@@ -87,7 +90,7 @@ const ReservationForm = () => {
                     </div>
 
                     <div className={styles.Input_Section}>
-                      <Field name="dining" as="select" className={styles.select_feild}>
+                      <Field name="dining" as="select" className={styles.select_feild} >
                         <option value="">Select a dining option</option>
                         <option value="Anniversary">Anniversary</option>
                         <option value="Birthday">Birthday</option>

@@ -14,7 +14,7 @@ export const Flex_comp_one = () => {
 </div>
 <div className={style.sect_flex}>
     <div className={style.left_Sect}>
-        <img src={img} alt="" />
+        <img src={img} alt="Chines & Grills" title='Chines & Grills'/>
     </div>
     <div className={style.right_Sect}>
     <p>Welcome to <b>Chinese and Grills</b>, where we combine the rich, authentic flavors of Chinese cuisine with the bold, smoky taste of grilled delights.</p>
@@ -25,7 +25,7 @@ Our journey started with a passion for bringing together two culinary worlds—t
     <p>At <b>Chinese and Grills</b>, we don't just serve food we create experiences.  We invite you to explore the unique blend of flavors that defines our culinary identity and discover why Chinese and Grills is more than just a restaurant—it’s a place where passion meets taste.</p>
    <Link to = "/menu">
    <button>
-    Book Table Now
+   Explore Menu
     </button>
     </Link>
    
