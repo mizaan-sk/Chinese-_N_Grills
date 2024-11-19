@@ -39,7 +39,56 @@ const Marquee = () => {
 <p className='marquee-text text-font-700 text-white'>Explore Menu</p>
 <img src={taco} alt="" className=' marquee-img-width' />
 <p className='marquee-text text-font-700 text-white'>Explore Menu</p>
-
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p><img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p><img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p><img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p><img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p><img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p><img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={chicken} alt="" className='marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={taco} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
+<img src={pizza} alt="" className=' marquee-img-width' />
+<p className='marquee-text text-font-700 text-white'>Explore Menu</p>
   </div>
  
 </div>

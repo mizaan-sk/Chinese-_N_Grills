@@ -7,6 +7,7 @@ import pure_veg from "../../assets/iconic-menu/pure-veg.png"
 import sandwich from "../../assets/iconic-menu/sandwich.png"
 import non_veg from "../../assets/iconic-menu/non-veg.png"
 import mocktails from "../../assets/iconic-menu/mocktails.png"
+import { NavLink } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
@@ -98,7 +99,9 @@ Menuitems.map((item,index)=>{
   <div className="iconic-card text-center " key = {index + 1}>
   <img src={item.image} alt="" className='w-75 mx-auto' />
   <p className='iconic-card-text text-font-500'>{item.title}</p>
-  <button className='iconic-card-btn'>Order Now</button>
+ <NavLink to = "/menu">
+ <button className='iconic-card-btn' >Order Now</button>
+ </NavLink>
 </div>
  )
 })
