@@ -52,7 +52,7 @@ const Caroussel = () => {
 <div className="caraousel-sect">
     <img src={burger} alt="" className='absolute-left' />
     <img src={pudina} alt="" className='absolute-right' />
-    <h1 className = "caraousel-heading text-center">Some Words From Out Customer</h1>
+    <h1 className = "caraousel-heading text-center">Some Words From Our Customer</h1>
     <div className={styles.Review_Card}>
                     <Container>
                         <Slider {...settings}>
