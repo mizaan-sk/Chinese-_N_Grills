@@ -10,6 +10,21 @@ a{
   text-decoration: none;
   color: inherit;
 }
+.w-75{
+  width: 75%;
+}
+.gap-1{
+  gap:10px
+}
+.gap-2{
+  gap:20px
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.text-left{
+  text-align: left;
+}
 .app{
   width: 80%;
   margin: auto;
@@ -37,6 +52,9 @@ a{
 .w-50{
   width: 50%;
 }
+.w-60{
+  width: 60%;
+}
 .j-between{
   justify-content: space-between;
 }
@@ -52,6 +70,9 @@ a{
 }
 .justify-content-center{
   justify-content: center;
+}
+.mx-auto{
+  margin: 0 auto;
 }
 .justify-content-between{
   justify-content: space-between;
@@ -73,6 +94,12 @@ a{
 }
 .w-100{
   width: 100%;
+}
+.w-50{
+  width: 50%;
+}
+.w-25{
+  width: 25%;
 }
 .adjust_height{
   height: 200px;
@@ -117,3 +144,97 @@ a{
   margin-bottom: 20px;
   font-size: 40px;
 }
+/* Marquee section css starts here */
+.marque-bg-color{
+  background-color: #AD1A19;
+}
+.marquee-bg{
+  padding: 10px;
+
+}
+.text-white{
+  color: #fff;
+}
+.text-font-500{
+  font-weight: 500;
+}
+.text-font-size-30px{
+  font-size: 30px;
+}
+
+.marquee_container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.2rem 0;
+}
+.marquee-text{
+  font-size: 30px;
+}
+.marquee-img-width{
+  width: 100px;
+}
+.marquee {
+  display: flex;
+  animation: marquee 40s linear infinite;
+  align-items: center;
+}
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@media screen and (max-width:991px) {
+  .marquee-text{
+    font-size: 20px;
+  }
+  .marquee-img-width{
+    width: 70px;
+  }
+}
+/* Marquee section ends starts here */
+/* Iconic Menu Section starts here */
+.iconic-menu-text{
+  font-size: 30px;
+}
+.iconic-menu{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.iconic-menu-font-700{
+font-weight: 700;
+}
+.iconic-cards{
+padding-top: 20px;
+padding-bottom: 50px;
+}
+.iconic-card {
+  width: 230px!important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.flex-column{
+  flex-direction: column;
+}
+.iconic-card-text{
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.iconic-card-btn{
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 5px 0px;
+  width: 70%;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-top: 1px;
+}
+/* Iconic Menu Section ends here */

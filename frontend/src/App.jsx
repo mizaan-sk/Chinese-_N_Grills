@@ -19,6 +19,7 @@ import { Contact_us } from './pages/contact_us/contact_us';
 import { Faq } from './pages/Faq/faq';
 import Menu from './pages/Menu/Menu';
 import { Navbar_new } from './components/navbar.jsx/navbar';
+import New_Home from './pages/New_Home/New_Home';
 
 const App = () => {
 
@@ -31,12 +32,12 @@ const App = () => {
 
   return (
     <>
-      {/* {showNavbarAndFooter && <Navbar_new />} */}
-      {showNavbarAndFooter && <Navbar />}
+      {showNavbarAndFooter && <Navbar_new />}
+      {/* {showNavbarAndFooter && <Navbar />} */}
 
       <Routes>
         {/* Public Routes */}
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<New_Home />} />
         <Route path='/cart' element={<Journey />} />
         <Route path='/order' element={<PlaceOrder />} />
         <Route path='/verify' element={<Verified />} />

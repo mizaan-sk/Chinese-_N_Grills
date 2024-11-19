@@ -8,6 +8,8 @@ import ReservationForm from '../../components/ReservationForm/ReservationForm'
 import Customer_Experience from '../../components/Customer_Experience/Customer_Experience'
 import Caroussel from '../../components/Caroussel/Caroussel'
 import { Footer_new } from '../../components/footer_new/footer_new'
+import Marquee from '../../components/marquee-sect/marquee-sect'
+import Iconic_Menu from '../../components/iconic-menu/iconic-menu'
 
 
 export const About_Us = () => {
@@ -20,6 +22,8 @@ export const About_Us = () => {
      <Exception_Service/>
      <ReservationForm/>
      <Customer_Experience/>
+     <Marquee/>
+     <Iconic_Menu/>
      <Caroussel/>
      <Footer_new/>
     </div>
