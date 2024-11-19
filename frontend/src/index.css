@@ -96,3 +96,24 @@ a{
 .adjust_height::-webkit-scrollbar-thumb:hover {
   background: #FF4C24; 
 }
+.caraousel-sect{
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.absolute-right{
+  position: absolute;
+  right: 0;
+}
+.absolute-left{
+  position: absolute;
+  right: left;
+  width: 11%;
+}
+.text-center{
+  text-align: center;
+}
+.caraousel-heading{
+  margin-bottom: 20px;
+  font-size: 40px;
+}
