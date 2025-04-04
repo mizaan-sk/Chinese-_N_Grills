@@ -1,6 +1,6 @@
 import userModel from "../models/usermodel.js";
 import jwt from "jsonwebtoken";
-import bcrypt from 'bcryptjs';
+import * as bcrypt from 'bcryptjs';
 import validator from "validator";
 import nodemailer from "nodemailer"
 const createToken = (id) =>{

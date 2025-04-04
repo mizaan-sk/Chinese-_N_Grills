@@ -1,7 +1,7 @@
 import userModel from "../models/usermodel.js";
 import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken"; 
-import bcrypt from 'bcryptjs';
+import * as bcrypt from 'bcryptjs';
 const Forgotpassword = async (req, res) => {
    try {
      const  email  = req.body.email;
