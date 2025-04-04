@@ -4,6 +4,8 @@ import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios';
 import { useEffect } from 'react';
 import { assets } from '../../assets/assets';
+import { Container } from '../customer_journey/plan_details/journey';
+import DisableCart from '../Cart/DisableCart/DisableCart';
 const MyOrders = () => {
     const { url, token } = useContext(StoreContext);
     const [data, setData] = useState([]);
@@ -18,11 +20,12 @@ const MyOrders = () => {
             fetchOrder();
         }
     }, [token])
-
+console.log(data)
     return (
-        <div className='my-orders'>
-            <h2>MyOrders</h2>
-            <div className="container">
+<Container>
+<div className='my-orders'>
+            {data.length > 0 ? 
+             <div className="container">
                 {data.map((order, index) => {
                     return (
                         <div key={index} className='my-orders-order'>   
@@ -43,7 +46,12 @@ const MyOrders = () => {
                     )
                 })}
             </div>
+            :
+          <DisableCart/>
+            }
+           
         </div>
+</Container>
     )
 }
 

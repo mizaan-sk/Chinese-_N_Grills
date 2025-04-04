@@ -6,12 +6,13 @@ import { ReservationSchema } from './ReservationSchema';
 import { Container } from '../../pages/customer_journey/plan_details/journey';
 import { toast, ToastContainer } from 'react-toastify';
 import * as Yup from "yup";
- 
+
 const ReservationForm = () => {
+  const today = new Date().toISOString().split('T')[0]; // Get today's date in 'YYYY-MM-DD' format
 
   const HandleSubmit = async (values, { resetForm }) => {
     try {
- 
+
       const res = await axios.post('http://localhost:5000/reservation/table', {
         email: values.email,
         name: values.name,
@@ -38,7 +39,7 @@ const ReservationForm = () => {
       <ToastContainer />
       <div className={styles.ReservationForm_MainSection}>
         <Container>
-          <h1>RESERVATION</h1>
+          <h1>Reserve Your Table</h1>
           <Formik
             initialValues={{
               name: '',
@@ -53,7 +54,7 @@ const ReservationForm = () => {
           >
             {() => (
               <Form>
-                <div className={styles.Reservation_White}>
+                <div className={styles.Reservation_White} id='res'>
 
                   <div className={styles.Reservation_Manage}>
                     <div className={styles.Input_Section}>
@@ -64,8 +65,8 @@ const ReservationForm = () => {
                     <div className={styles.Input_Section}>
                       <Field name="email" type="email" placeholder="Enter Email" className={styles.select_feild} />
                       <ErrorMessage name="email" component="div" style={{ color: 'red' }} className="error-message">
- 
-</ErrorMessage>
+
+                      </ErrorMessage>
                     </div>
 
                     <div className={styles.Input_Section}>
@@ -76,11 +77,17 @@ const ReservationForm = () => {
                         <option value="Corporate Dinner">Corporate Dinner</option>
                         <option value="Candle Light Dinner">Candle Light Dinner</option>
                       </Field>
-                      <ErrorMessage name="occasion" component="div" style={{ color: 'red' }} className="error-message"  />
+                      <ErrorMessage name="occasion" component="div" style={{ color: 'red' }} className="error-message" />
                     </div>
 
                     <div className={styles.Input_Section}>
-                      <Field name="date" type="date" placeholder="Enter Date" className={styles.select_feild} />
+                      <Field
+                        name="date"
+                        type="date"
+                        placeholder="Enter Date"
+                        className={styles.select_feild}
+                        min={today} // Prevents selection of past dates
+                      />
                       <ErrorMessage name="date" component="div" style={{ color: 'red' }} className="error-message" />
                     </div>
 
@@ -102,7 +109,7 @@ const ReservationForm = () => {
                       <ErrorMessage name="dining" component="div" style={{ color: 'red' }} className="error-message" />
                     </div>
                   </div>
-                  <div className={styles.submits_button}> 
+                  <div className={styles.submits_button}>
                     <button type="submit">Reserve Table</button>
                   </div>
                 </div>

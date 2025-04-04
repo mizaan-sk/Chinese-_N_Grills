@@ -1,12 +1,38 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 4%;
+    padding: 8px 12px;
+    width: 100%; /* Ensures it spans the full width */
+    background-color: #fff; /* Set a background color to prevent content underneath from showing through */
+    z-index: 1000; /* Ensures the navbar is above other elements */
 }
-.navbar .logo{
-    width: max(10%,80px);
+.nav-logo-text{
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+.nav-logo-span{
+    font-size: 15px;
+    font-weight: 500;
 }
 .navbar .profile{
     width: 40px;
+}
+.Container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+@media screen and (max-width:450px) {
+    .nav-logo-text{
+        font-size: 16px;
+    }
+    .nav-logo-span{
+        font-size: 11px;
+    }
+.navbar .profile{
+width: 35px;
+}
 }

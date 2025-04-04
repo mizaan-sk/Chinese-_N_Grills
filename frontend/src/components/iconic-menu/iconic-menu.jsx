@@ -15,34 +15,29 @@ const Iconic_Menu = () => {
  var settings = {
     dots: false,
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 750,
         arrows: false,
+        pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false
         }
       },
       {
-        breakpoint: 600,
+        breakpoint:630,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
         }
       }
     ]
@@ -56,7 +51,7 @@ const Iconic_Menu = () => {
     {
       id:2,
       image:pure_veg,
-      title:"Veg Manchurian",
+      title:"Manchurian",
     },
     {
       id:3,
@@ -89,18 +84,17 @@ const Iconic_Menu = () => {
  <>
 <Container>
    <div className="iconic-menu">
-   <h2 className='text-left iconic-menu-text iconic-menu-font-700'>Our Iconic Menu</h2>
-   <div className="slider-container iconic-cards    ">
+   <h2 className='text-center iconic-menu-text iconic-menu-font-700'>Our Iconic Menu</h2>
+   <div className="slider-container iconic-cards">
       <Slider {...settings}>
-    
     {
 Menuitems.map((item,index)=>{
  return(
   <div className="iconic-card text-center " key = {index + 1}>
-  <img src={item.image} alt="" className='w-75 mx-auto' />
+  <img src={item.image} alt="" className='w-75 mx-auto ' />
   <p className='iconic-card-text text-font-500'>{item.title}</p>
- <NavLink to = "/menu">
- <button className='iconic-card-btn' >Order Now</button>
+ <NavLink to = "/menu" target='_top' >
+ <button className='iconic-card-btn all-btn' >Order Now</button>
  </NavLink>
 </div>
  )

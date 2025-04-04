@@ -2,9 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import david from '../../assets/Caroussel_Image/david.png';
-import sarah from '../../assets/Caroussel_Image/sarah.png';
-import priya from '../../assets/Caroussel_Image/priya.png';
+import david from '../../assets/review_1.png';
+import sarah from '../../assets/review_2.jpg';
+import priya from '../../assets/review_4.jpg';
+import riya from '../../assets/review_3.jpg';
 import stars from '../../assets/Caroussel_Image/stars.png';
 import burger from "../../assets/Caroussel_Image/burger-img.png";
 import pudina from "../../assets/Caroussel_Image/pudina.png";
@@ -13,12 +14,11 @@ import styles from './Caroussel.module.css';
 const Caroussel = () => {
 
     const CardsData = [
-        { id: 1, image: <img src={david} />, name: 'Sarah M.',  stars: <img src={stars} />, content: 'Absolutely loved the food at Chinese and Grills! The dumplings were perfectly steamed, and the grilled chicken skewers were bursting with flavor. The staff was friendly, and the ambiance was cozy. Will definitely be coming back soon!' },
-        { id: 2, image: <img src={sarah} />, name: 'David R.',  stars: <img src={stars} />, content: "Chinese and Grills has quickly become my go-to spot for a delicious meal. The General Tso's chicken was crispy and tangy, and the grilled prawns were seasoned to perfection. Highly recommend it to anyone looking for a fantastic dining experience."
-
+        { id: 1, image: <img src={david} />, name: 'Fatema Cheni.',  stars: <img src={stars} />, content: 'Yumm food and good atmosphere , service Overall good experience . Best place for all chinese lovers nearby Manchow soup is a must try here .' },
+        { id: 2, image: <img src={sarah} />, name: 'Kashif Ajmeri',  stars: <img src={stars} />, content: "One of the best Chinese restro in Vasind Bhiwandi. Very Powerful 💪💪💪. The Owner (Shahrukh Bhai) Is Very Helpful & Friendly.Will surely Visit again With Friends & Family."
  },
-        { id: 3, image: <img src={priya} />, name: 'Priya S',  stars: <img src={stars} />, content: "What a gem of a restaurant! The hot and sour soup was just the right level of spicy, and the grilled lamb chops were tender and juicy. Amazing food, great service, and reasonable prices. A must-visit for food lovers!" },
-       
+        { id: 3, image: <img src={priya} />, name: 'Suraj Patil',  stars: <img src={stars} />, content: "Food has awesome taste. Ambience is also good to have dinner with family and friends. But there is one suggestion, they should customize the dishes as per customer requirements." },
+        { id: 3, image: <img src={riya} />, name: 'Yashaswi Devare',  stars: <img src={stars} />, content: "Absolutely loved the food at Chinese and Grills! The dumplings were perfectly steamed, and the grilled chicken skewers were bursting with flavor." },
     ];
 
     const settings = {
@@ -29,7 +29,8 @@ const Caroussel = () => {
         autoplay: true,
         autoplaySpeed: 1000,
         arrows: false,
-        responsive: [
+        pauseOnHover: false,
+            responsive: [
             {
                 breakpoint: 990,
                 settings: {

@@ -11,15 +11,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 0px 10px;
 }
 
 .Exception_Service_Image img {
-    width: 85%;
+    width: 280px;
+    height: 412px;
+    border-radius: 10px;
 }
 
 .Exception_Service_ContentSection h1 {
     font-family: Poppins;
-    font-size: 40px;
+    font-size: 37px;
     font-weight: 700;
 }
 
@@ -49,6 +52,7 @@ font-size: 22px;
 padding: 4px 6px;
 font-weight: 700;
 border-radius: 20px;
+margin-top: 6px;
 margin-bottom: 10px;
 }
 @media screen and (max-width:992px){
@@ -57,7 +61,8 @@ margin-bottom: 10px;
         flex-direction: column;
     }
     .Exception_Service_Image img {
-        width: 100%;
+        width: 350px;
+        border-radius: 22px;
         padding: 12px;
     }
     .Exception_Service_ContentSection button{

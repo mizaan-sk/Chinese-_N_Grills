@@ -8,12 +8,21 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    position: relative;
+}
+.eye_icon{
+    position: absolute;
+    top: 46px;
+    left:93%;
+    font-size: 21px;
+    color: black;
+    cursor: pointer;
 }
 label {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
-}
-input{
+} 
+.form_div input{
     width: 100%;
     outline: none;
     border: none;
@@ -34,9 +43,13 @@ input{
     padding:5px!important ;
     margin-top: 15px;
     font-size: 20px;
+    background-color: #FF4D25;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 .btn_new:hover{
-    background-color: rgb(184, 79, 79);
+    background-color: #ac381f;
 }
 span{
     color: red;
@@ -44,4 +57,21 @@ span{
 
 .eye_inner{
 position: relative;
+}
+
+@media screen and (max-width:650px){
+    .eye_icon{
+    left: 90%;
+    font-size: 18px;
+    }
+.btn_new{
+font-size: 18px;
+padding: 5px;
+}
+label{
+    font-size: 17px;
+}
+.form_div input{
+    font-size: 10px;
+}
 }

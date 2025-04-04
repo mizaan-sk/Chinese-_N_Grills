@@ -5,6 +5,7 @@
     flex-direction: column;
     height: 85vh;
     gap: 5px;
+    margin-top: 40px;
 }
 
 .image_sect img {
@@ -21,9 +22,21 @@
 }
 
 .image_sect button {
-    width: 22vw;
-    font-size: 15px;
-    /* padding: 5px !important; */
-    /* border-radius:2px ; */
-    margin-bottom: 19px;
+    max-width:290px ;
+    font-size: 16px;
+    padding: 7px 5px;
+}
+@media screen and (max-width:420px) {
+.image_sect img {
+width: 160px;
+height: 160px;
+margin-top: 20px;
+}
+.image_sect p {
+    font-size: 12px;
+}
+.image_sect button {
+    font-size: 13px;
+    padding: 7px;
+}
 }

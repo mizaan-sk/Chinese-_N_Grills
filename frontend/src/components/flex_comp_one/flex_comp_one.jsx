@@ -23,8 +23,8 @@ export const Flex_comp_one = () => {
 Our journey started with a passion for bringing together two culinary worlds—traditional Chinese flavors and the art of grilling. At Chinese and Grills, we believe in using the freshest ingredients, carefully selected to ensure that each dish we serve is of the highest quality. From sizzling grills to aromatic Chinese favorites, every bite is crafted to deliver an unforgettable taste experience.
     </p>
     <p>At <b>Chinese and Grills</b>, we don't just serve food we create experiences.  We invite you to explore the unique blend of flavors that defines our culinary identity and discover why Chinese and Grills is more than just a restaurant—it’s a place where passion meets taste.</p>
-   <Link to = "/menu">
-   <button>
+   <Link to = "/menu" target='_top'>
+   <button >
    Explore Menu
     </button>
     </Link>

@@ -1,58 +1,73 @@
-
-.refer_section{
+.refer_section {
     display: flex;
     flex-direction: column;
     gap: 5px;
     margin-bottom: 3px;
     border-radius: 6px;
 }
-.refer_form_section{
+
+.refer_form_section {
     width: 350px;
     border-radius: 25px;
     padding: 15px;
 }
-.refer_section label{
-    font-size: 15px;
+
+.refer_section label {
+    font-size: 17px;
+    color: black;
+    font-weight: normal;
+}
+
+.refer_btn {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    border: none;
+    padding: 3px 6px;
+    font-weight: 600;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.refer_btn:hover {
+    background-color: #db6139;
     color: white;
+    transition: 0.2s;
 }
-.refer_btn{
-color: black;
-background-color: white;
-padding: 4px;
-font-size: 15px;
-transition: .3s;
-}
-.refer_btn:hover{
-    background-color: black;
-    color: white;
-    transition: .2s;
-}
-.refer_form_section input{
+
+.refer_form_section input {
     border-radius: 4px;
     font-size: 15px;
     width: 100%;
     padding: 4px;
 }
-.refer_section span{
+
+.refer_section span {
     color: red;
     font-size: 18px;
 }
-@media  screen and (max-width: 768px) {
-.refer_form_section{
-    width: 100vw;
+
+/* Responsive Styles for Referform */
+@media screen and (max-width: 768px) {
+    .refer_form_section {
+        width: 90vw; /* Take most of the screen width */
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+
+    .refer_form_section input {
+        width: 100%;
+    }
+
+    .refer_btn {
+        width: 100%;
+    }
 }
-.refer_form_section input{
-    width: 450px;
-}
-.refer_btn{
-    width: 440px;
-}
-}
+
 @media screen and (max-width: 480px) {
-.refer_form_section input{
-    width: 300px;
-}
-.refer_btn{
-    width: 300px;
-}
+    .refer_section label,
+    .refer_btn {
+        font-size: 16px;
+    }
 }

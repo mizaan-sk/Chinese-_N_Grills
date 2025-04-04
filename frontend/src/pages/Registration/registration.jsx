@@ -21,7 +21,7 @@ const handleClick = () => {
         <div className={style.overlay}></div>
         <div className={style.form}>
           <div className={style.head_img}>
-            <img src={img} alt="logo image"  onClick={handleClick}/>
+            <h1>Chinese N Grills</h1>
             <div className={style.form_start}>
               <div className={style.d_flex}>
                 <ul>

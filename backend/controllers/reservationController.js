@@ -34,5 +34,16 @@ const reserveTable = async (req, res) => {
     }
 
 };
-
-export {reserveTable};
+const getReservations = async (req, res) => {
+   try {
+     const reservations = await reservationModel.find(); // Fetch all reservations
+     if (!reservations) {
+       return res.status(404).json({ success: false, message: 'No reservations found.' });
+     }
+     return res.status(200).json({ success: true, data: reservations });
+   } catch (error) {
+     console.error('Error fetching reservations:', error);
+     return res.status(500).json({ success: false, message: 'Error fetching reservations.' });
+   }
+ };
+export {reserveTable,getReservations};

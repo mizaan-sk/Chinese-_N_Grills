@@ -1,9 +1,9 @@
-/* MenuSelect.module.css */
 .menu_select_main_section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn_main_section p {
@@ -31,14 +31,26 @@
     padding: 7px 15px;
     transition: 0.2s ease;
 }
-
-@media screen and (max-width:750px) {
+@media screen and (max-width:1000px) {
     .menu_select_main_section{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 0px 5px;
+        gap: 10px;
     }
+.btn_main_section p {
+font-size: 17px;
+padding: 4px 8px;
+text-align: center;
 }
+}
+@media screen and (max-width:786px) {
+.btn_main_section p {
+    margin: 0px 3px;
+font-size: 16px;
+}
+}
+@media screen and (max-width:490px) {
+    .btn_main_section p {
+        margin: 0px 3px;
+    font-size: 14px;
+    padding: 3px 6px;
+        }
+    }

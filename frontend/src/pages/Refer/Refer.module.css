@@ -1,8 +1,8 @@
-/* Base Styles for larger screens */
 .referfriend {
     font-weight: 700;
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
 }
 
 .cont {
@@ -13,19 +13,19 @@
     width: 100%;
     margin: 0 auto;
     padding: 20px; /* Added padding for spacing */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
-.cont .img {
-    width: 40%; /* Changed from fixed to percentage */
+.cont .refer_img {
+    width: 40%; /* Adjusted for responsiveness */
     max-width: 500px;
     border-right: 2px solid rgb(167, 163, 163);
 }
 
 .ref_code {
-    background-color: #5AE4A8;
+    background-color: #FF4D25;
     border-radius: 10px;
     max-width: 90%; /* Made it fluid */
-    
     padding: 10px;
     text-align: center; /* Ensures the text is centered */
 }
@@ -62,11 +62,40 @@
 }
 
 .form {
-    background-color: #5AE4A8;
+    background-color: #FF4D25;
     border-radius: 10px;
     padding: 20px; /* Added padding for spacing */
     width: 100%; /* Make form responsive */
     max-width: 500px; /* Set max width */
+}
+
+/* Responsive Styles for Refer */
+@media screen and (max-width: 768px) {
+    .cont {
+        flex-direction: column; /* Stack items */
+        gap: 15px;
+    }
+
+    .cont .refer_img {
+        width: 100%;
+        max-width: none;
+        border-right: none;
+    }
+
+    .ref_code {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .form {
+        width: 90vw;
+        max-width: none;
+    }
+
+    .referfriend {
+        font-size: 22px;
+        text-align: center;
+    }
 }
 
 /* Responsive Styles for smaller screens */
@@ -77,11 +106,11 @@
         padding: 10px;
     }
 
-    .cont .img {
+    .cont .refer_img {
         width: 80%; /* Shrinks image for mobile */
         border-right: none; /* Remove border on mobile */
     }
-
+    
     .ref_code {
         width: 90%; /* Increase the width on smaller screens */
         margin: 0 auto;
@@ -91,31 +120,29 @@
         font-size: 18px; /* Reduce the font size */
     }
     .form{
+        width: 100%;
         margin: 0 auto;
         padding: 5px;
     }
-   
+    
 }
 
 @media screen and (max-width: 480px) {
-    .referfriend {
-        font-size: 20px; /* Decrease title size for smaller devices */
-    }
-
-    .form{
-        margin: 0 auto;
-    }
     .ref_code {
-        margin: 0 auto;
         padding: 8px;
     }
 
-    .form {
-        width: 90%; /* Form takes more space on smaller screens */
-        max-width: 400px;
+    .ref_code h3 {
+        font-size: 15px;
+        gap: 8px;
     }
 
-    .cont .img {
-        width: 100%; /* Image takes full width on very small screens */
+    .referfriend {
+        font-size: 20px;
+    }
+
+    .cont {
+        gap: 10px;
     }
 }
+

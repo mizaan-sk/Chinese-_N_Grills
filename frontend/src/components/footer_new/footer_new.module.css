@@ -55,20 +55,24 @@ justify-content: space-between;
     font-size: 18px;
     text-transform: capitalize;
 }
+.location_icon_addr_combine{
+    color: black;
+    font-weight: 700;
+    font-size: 17px;
+}
 @media screen and (max-width:991px) {
     .footer_top{
    /* flex-wrap: wrap; */
    flex-direction: column;
 align-items: center;
+text-align: center;
      /* align-items: flex-start; */
      padding-bottom: 20px;
     }
     .footer_bottom{
-        /* flex-wrap: wrap; */
         flex-direction: column;
-        gap: 10px;
-        /* justify-content: center;
-        align-items: center; */
+        gap: 7px;
+        margin-top: 0px;
     }
     .footer_top .center_text p{
         font-size: 20px ;
@@ -79,5 +83,31 @@ align-items: center;
     }
     .footer_bottom .links p{
         font-size: 18px;
+    }
+    .address{
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        border-bottom: 2px solid #ccc;
+        gap: 3px;
+    }
+    .hours{
+        text-align: center;
+        border-bottom: 2px solid #ccc;
+
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;     
+    }
+    .location_icon_addr_combine{
+        text-align: center;
+    }
+    .location_icon{
+        align-items: center;
+    }
+    .footer_bottom .address p:first-child{
+        margin-bottom: 0px;
     }
 }

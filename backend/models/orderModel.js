@@ -12,4 +12,4 @@ const orderSchema = new mongoose.Schema({
 // Check if a model named "order" already exists in Mongoose's models.
 // If it does, use the existing model. Otherwise, create a new model named "order" using the orderSchema.
 const orderModel = mongoose.models.order || mongoose.model("order",orderSchema)
-export default orderModel;
+export default orderModel;  

@@ -3,7 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './Refer.module.css';
 import { Container } from '../customer_journey/plan_details/journey';
-import ReferImage from '../../assets/referimage.png';
+import ReferImage from '../../assets/refer_friend.png';
 import copy from '../../assets/copy.png';
 import Referform from './Referform';
 
@@ -18,11 +18,12 @@ const Refer = () => {
     const number = Math.floor(Math.random() * 900) + 100;
     setRandomNumber(number);
   };
+  // let namestore = localStorage.setItem('name');
 
   let name = localStorage.getItem('name');
 
   const referalCode = (name) => {
-    return `${name}${randomNumber}`;
+    return `REF${randomNumber}`;
   };
 
   const handleCopyClick = () => {
@@ -43,7 +44,7 @@ const Refer = () => {
       <Container>
         <h1 className={styles.referfriend}>Refer A Friend</h1>
         <div className={styles.cont}>
-          <img className={styles.img} src={ReferImage} alt="Refer" />
+          <img className={styles.refer_img} src={ReferImage} alt="Refer" />
           <div className={styles.referal_sect}>
             <div className={styles.ref_code}>
               <h3>

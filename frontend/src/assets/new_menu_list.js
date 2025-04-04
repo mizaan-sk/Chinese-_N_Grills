@@ -13,5 +13,14 @@ export const new_menu_list = [{
 },
 {
     menu_name: "Sandwich",
+},
+{
+    menu_name: "Salad",
+},
+ {
+    menu_name: "Rolls",
+},
+{
+    menu_name: "Deserts",
 }
 ]

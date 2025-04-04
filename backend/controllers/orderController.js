@@ -2,12 +2,10 @@ import orderModel from "../models/orderModel.js";
 import usermodel from "../models/usermodel.js";  // Correcting the case of userModel import
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
 // Placing order from frontend
 const placeOrder = async (req, res) => {
-    const frontend_url = "http://localhost:5173";
     try {
+        // Create a new order using the request body
         const newOrder = new orderModel({
             userId: req.body.userId,
             items: req.body.items,
@@ -19,43 +17,11 @@ const placeOrder = async (req, res) => {
         // Clear user's cart data after placing the order
         await usermodel.findByIdAndUpdate(req.body.userId, { cartdata: {} });
 
-        // Create line items for the Stripe checkout session based on order items
-        const line_items = req.body.items.map((item) => ({
-            price_data: {
-                currency: "inr",
-                product_data: {
-                    name: item.name     // Product name from each item
-                },
-                unit_amount: item.price * 100     // Unit amount in cents (paisa)
-            },
-            quantity: item.quantity     // Quantity of each item
-        }));
-
-        // Add a delivery charge as a line item (example: ₹20 delivery charge)
-        line_items.push({
-            price_data: {
-                currency: "inr",
-                product_data: {
-                    name: "Delivery Charges"
-                },
-                unit_amount: 20 * 100   // ₹20 in cents (paisa)
-            },
-            quantity: 1 // Quantity of the delivery charge item
-        });
-
-        // Create a new checkout session with Stripe
-        const session = await stripe.checkout.sessions.create({
-            line_items: line_items,
-            mode: 'payment',
-            success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
-            cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`
-        });
-
-        // Respond with the success and the URL for the Stripe checkout session
-        res.json({ success: true, session_url: session.url });
+        // Respond with success and the newly created order details
+        res.json({ success: true, order: newOrder });
     } catch (error) {
-        console.log(error);
-        res.json({ success: false, message: "Error" });
+        console.error(error);
+        res.json({ success: false, message: "Error placing order" });
     }
 };
 

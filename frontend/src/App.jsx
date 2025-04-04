@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
@@ -20,6 +19,9 @@ import { Faq } from './pages/Faq/faq';
 import Menu from './pages/Menu/Menu';
 import { Navbar_new } from './components/navbar.jsx/navbar';
 import New_Home from './pages/New_Home/New_Home';
+import { Payment } from './pages/customer_journey/payment/payment';
+import Navbar_Home from './components_2/Navbar_Home/Navbar_Home';
+import { Footer_new } from './components/footer_new/footer_new';
 
 const App = () => {
 
@@ -32,8 +34,8 @@ const App = () => {
 
   return (
     <>
-      {showNavbarAndFooter && <Navbar_new />}
-      {/* {showNavbarAndFooter && <Navbar />} */}
+      {/* {showNavbarAndFooter && <Navbar_new />} */}
+      {showNavbarAndFooter && <Navbar_Home />} 
 
       <Routes>
         {/* Public Routes */}
@@ -46,6 +48,8 @@ const App = () => {
         <Route path='/faq' element={<Faq />} />
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/newhome' element={<Faq />} />
+        <Route path='/payment' element={<Payment/>} />
+
       
         {!isLoggedin && (
        <>
@@ -67,7 +71,8 @@ const App = () => {
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
 
-      {showNavbarAndFooter && <Footer />}
+      {showNavbarAndFooter && <Footer_new/>
+      }
     </>
   );
 };

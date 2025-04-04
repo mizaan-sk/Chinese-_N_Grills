@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import style from "./contact_us_form.module.css";
 import { Container } from '../../pages/customer_journey/plan_details/journey';
-import contact_us_form_img from "../../assets/contact_us/contact_us_img.png";
+import contact_us_form_img from "../../assets/flex_comp_one/flex_comp_one.png";
 import * as Yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { StoreContext } from '../../context/StoreContext';

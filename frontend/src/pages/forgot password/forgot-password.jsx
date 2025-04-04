@@ -49,12 +49,13 @@ export const Forgot_Password = () => {
                 Email:
                 <input
                   type="email"
+                  placeholder='eg.abc@gmail.com'
                   value={email}
                   onChange={handleEmailChange}
                   required
                 />
               </label>
-              <button type="submit">Submit</button>
+              <button type="submit" className={styles.btn_forgot_pass}>Submit</button>
               <ToastContainer />
             </form>
           </div>

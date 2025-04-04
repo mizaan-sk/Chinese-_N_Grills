@@ -107,7 +107,7 @@ export const Register = ({changeTabs}) => {
             type="password"
             name="con_password"
             className="form-control"
-            id="exampleInputPassword1"
+            id="exampleInputPassword2"
             value={values.con_password}
             onChange={handleChange}
             onBlur={handleBlur}

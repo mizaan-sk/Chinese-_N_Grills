@@ -15,23 +15,14 @@
     position: relative;
 }
 
-.Pudina_Image {
-    background: url('../../assets/Caroussel_Image/pduina-image.png');
+/* .Pudina_Image {
+    background: url('../../assets/Caroussel_Image/pudina-image.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 130px;
     width: 80px;
     z-index: 0;
-}
-
-.Review_Card {
-    /* width: 100%;
-    margin-top: 90px;
-    text-align: center;
-    position: absolute;
-    z-index: 1; */
-}
-
+} */
 .Cards_Section {
     max-width: 90%;
     width: 100%;
@@ -47,8 +38,10 @@
 }
 
 .Image img {
-    width: 80%;
-    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 10px;
 }
 
 .User_Name {
@@ -78,27 +71,20 @@
     font-weight: 600;
     margin-top: 15px;
 }
+
 .slick-prev, .slick-next {
     display: none;
-  }
-  
-@media screen and (max-width:1180px) {
-    .Content_Section{
-        gap: 0px;
+}
 
+@media screen and (max-width:1180px) {
+    .Content_Section {
+        gap: 0px;
     }
-    .stars img{
+    .stars img {
         width: 90px;
     }
     .Image img {
         width: 70px;
         margin-right: 10px;
     }
-
-} 
- @media screen and (max-width:786px) {
-    .Review_Card {
-        left: 20px;
-        max-width: 88%;
-    }
- }
+}

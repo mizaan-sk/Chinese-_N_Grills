@@ -10,13 +10,16 @@ import forgotpasswordRouter from "./routes/forgotpassworRouter.js";
 import ReferEmailRouter from './routes/ReferEmail.js'
 import contact_form_router from "./routes/contact_form_router.js";
 import reservationRouter from "./routes/ReservationRouter.js";
-
-
+import BillRouter from "./routes/SendingBillRoute.js";
+import DeliveryBillRouter from "./routes/DeliveryBill.js";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 //app config
 const app = express();
-const port = 5000;
-
+const port =process.env.PORT || 5000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //middleware
 app.use(express.json());
 app.use(cors()); //using this we can access backend from frontend
@@ -34,22 +37,17 @@ app.use("/user",forgotpasswordRouter)
 app.use("/refer",ReferEmailRouter)
 app.use("/contact",contact_form_router)
 app.use("/reservation",reservationRouter)
+app.use("/api/bill",BillRouter)
+app.use('/api/delivery',DeliveryBillRouter)
 
+// app.get("/", (req, res) => {
+//     res.send("API Working");
+// });
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-
-
-
-
-
-app.get("/", (req, res) => {
-    res.send("API Working");
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 app.listen(port, () => {
     console.log(`Server starting at port http://localhost:${port}`);
 });
-//mongodb+srv://mizaan:7208151615@cluster0.vmtq1wk.mongodb.net/?
-
-
-
-
-

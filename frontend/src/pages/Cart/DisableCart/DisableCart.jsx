@@ -13,7 +13,7 @@ const DisableCart = () => {
             <img src={MyImage } alt="image" />
             <h4>Your cart is empty</h4>
             <p>You can go to home page to view more Foods</p>
-        <Link to='/'><button>Click! To See Your Delicious Food</button></Link>
+        <Link to='/menu' target='_top'><button className='all-btn'>Click! To See Your Delicious Food</button></Link>
         </div>
    </Container>
         </>
